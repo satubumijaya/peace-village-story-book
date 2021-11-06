@@ -1,0 +1,184 @@
+<section id="st-3-1" class="section" data-section="0">
+    <img src="images/st-3/st3-1.png" alt="img-1" />
+    <div class="content-section" data-aos="fade-right" data-aos-duration="2000">
+        <div class="title-story">
+            <h6 class="subtitle">Story</h6>
+            <h3 class="title">03. HASANAH</h3>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-2" class="section" data-section="0">
+    <!-- <video id="v-st-3-2" class="video-background" loop muted>
+        </video> -->
+    <div class="bg-video">
+        <!-- <iframe width="1664" height="770" src="https://www.youtube.com/embed/VoBsZlK6ldo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe width="1664" height="770" src="https://www.youtube.com/embed/VoBsZlK6ldo?playlist=VoBsZlK6ldo&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="content-section bg-blue-overlay">
+        <div class="d-flex align-center">
+            <div class="card-box">
+                <p class="quote" data-aos="fade-right" data-aos-duration="2000">“While it began as economic empowerment activities, the Peace Village idea has now broadened into a variety of community-led efforts aimed at creating a more conducive environment for everyone to enjoy life in Guluk-Guluk.”</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-3" class="section" data-section="0">
+    <img src="images/st-3/st3-3.png" alt="img-1" />
+    <div class="content-section align-bottom black-overlay-right">
+        <div class="d-flex justify-end">
+            <div class="card-box">
+                <p class="story regular" data-aos="fade-left" data-aos-duration="2000">Hasanah has always been active in the community, engaging with environmental efforts and women’s farming groups in Guluk-Guluk village for many years. These experiences saw her quickly take on a leadership role when Peace Village activities began in 2017, as she recognised the value in the economic empowerment focus that the programme offered to women in her community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-4" class="section" data-section="0">
+    <img src="images/st-3/st3-4.png" alt="img-1" />
+    <div class="content-section align-bottom black-overlay-bottom" data-aos="fade-right" data-aos-duration="2000">
+        <div class="d-flex justify-end">
+            <div class="card-box">
+                <p class="story regular">Over the years the programme broadened its scope – introducing Hasanah to new people and ideas – with and her skills and experience as a community leader then developed and utilised to play a key role in conflict management and peacebuilding efforts in the wider community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-5" class="section" data-section="0">
+    <img class="greyscale" src="images/st-3/st3-4.png" alt="img-2" />
+    <div class="content-section align-bottom">
+        <div class="half-full-height-blue-opacity-right">
+            <p class="quote regular">“In the Peace Village activities I learnt how to better handle conflict, and how to focus on building peace and harmony between people in my community. How I should respond to problems as they arise was a big part of what I learnt.”</p>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-6" class="section video-scroll" data-section="0">
+    <!-- <video id="v-st-3-6" class="video-background" loop muted>
+        </video> -->
+
+    <div class="bg-video">
+        <iframe width="1664" height="770" src="https://www.youtube.com/embed/RCc0GbGsaoQ?playlist=RCc0GbGsaoQ&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="content-section align-center">
+        <div class="center-box d-flex">
+            <div class="list-scroll">
+                <div class="list-box-opacity">
+                    <p class="thin-text">Village elections have traditionally been a time of high tension and significant conflict in Guluk-Guluk.</p>
+                </div>
+            </div>
+
+            <div class="list-scroll">
+                <div class="list-box-opacity">
+                    <p class="thin-text">Hasanah and the Peace Village working group took action to de-escalate rising tensions in the community during the lead-up to the most recent ballot.</p>
+                </div>
+            </div>
+
+            <div class="list-scroll">
+                <div class="list-box-opacity">
+                    <p class="thin-text">They convened meetings and discussions between the competing candidates and their supporters.</p>
+                </div>
+            </div>
+
+            <div class="list-scroll">
+                <div class="list-box-opacity">
+                    <p class="thin-text">Finally, all key parties signed an agreement of peace and good behaviour that would be adhered to during the election period.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-7" class="section bg-image-overlay" data-section="0">
+    <!-- <img src="images/st-3/st3-5.png" alt="img-2" data-aos="fade-left" data-aos-duration="2000"> -->
+    <div class="content-section align-bottom">
+        <div class="half-full-height-blue">
+            <div class="cardbox-overlay">
+                <p class="thin-text">As a result, the elections ran smoothly and peacefully for the first time in many years, and the outcomes were accepted and supported by all parties involved in the mediation, as well as in the wider community.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-scroll">
+        <img src="images/st-3/st3-5.png" alt="img-2" data-aos="fade-left" data-aos-duration="2000" />
+        <img src="images/st-3/st3-6.png" alt="img-2" data-aos="fade-left" data-aos-duration="2000" />
+        <img src="images/st-3/st3-7.png" alt="img-2" data-aos="fade-left" data-aos-duration="2000" />
+    </div>
+
+    <div class="icon-scroll">
+        <img src="images/icon-arrow.png" alt="" />
+    </div>
+</section>
+
+<!-- <section id="st-3-8" class="section" data-section="0">
+        <img src="images/st-3/st3-6.png" alt="img-2" data-aos="fade-left" data-aos-duration="2000">
+        <div class="content-section align-bottom">
+          <div class="half-full-height-blue">
+            <div class="cardbox-overlay">
+              <p class="thin-text">
+                As a result, the elections ran smoothly and peacefully for the first time in many years, and the outcomes were accepted and supported by all parties involved in the mediation, as well as in the wider community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="st-3-9" class="section" data-section="0">
+        <img src="images/st-3/st3-7.png" alt="img-2" data-aos="fade-left" data-aos-duration="2000">
+        <div class="content-section align-bottom">
+          <div class="half-full-height-blue">
+            <div class="cardbox-overlay">
+              <p class="thin-text">
+                As a result, the elections ran smoothly and peacefully for the first time in many years, and the outcomes were accepted and supported by all parties involved in the mediation, as well as in the wider community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+<section id="st-3-10" class="section" data-section="0">
+    <!-- <video id="v-st-3-10" class="video-background" loop muted>
+        </video> -->
+
+    <div class="bg-video">
+        <!-- <iframe width="1664" height="770" src="https://www.youtube.com/embed/oVDuF6MQ7To" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe width="1664" height="770" src="https://www.youtube.com/embed/oVDuF6MQ7To?playlist=oVDuF6MQ7To&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section id="st-3-11" class="section" data-section="0">
+    <img src="images/st-3/st3-8.png" alt="img-2" data-aos="fade-bottom" data-aos-duration="2000" />
+    <div class="content-section bottom-overlay-opacity d-flex align-bottom">
+        <div class="d-flex align-bottom">
+            <div class="card-box">
+                <p class="story regular">As a Board Member for the Peace Village working group, Hasanah and her team are working to expand the reach of their peacebuilding efforts. They have developed Kompolan Esto Damai – which is a forum for community participation in the village, and also a mechanism for early identification of conflict.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-12" class="section" data-section="0">
+    <img src="images/st-3/st3-9.png" alt="img-2" />
+    <div class="content-section bg-black-overlay d-flex align-bottom" data-aos="fade-right" data-aos-duration="2000">
+        <div class="d-flex align-bottom">
+            <div class="card-box">
+                <p class="story regular">In the working group itself there are approximately 40% of members who are male, and they remain accepting – and enthusiastic – of such women-led movements in a traditionally patriarchal society. For Hasanah, as a life-long activist, the impact of the Peace Village programme has significant personal meaning, as herself and other women now feel more fulfilled and engaged than ever before.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="st-3-13" class="section" data-section="0">
+    <img src="images/st-3/st3-10.png" alt="img-2" />
+    <div class="content-section align-bottom" data-aos="fade-bottom" data-aos-duration="2000">
+        <div class="bottom-overlay d-flex justify-center">
+            <div class="card-box">
+                <p class="thin-text italic">“The women of Guluk-Guluk have become more creative. After they engage as a group, often for the first time in their lives, I can see this new type of happiness emerge. Maybe because they meet other women, and when they get together new ideas continue to appear.”</p>
+            </div>
+        </div>
+    </div>
+</section>
