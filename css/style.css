@@ -58,14 +58,14 @@ section img {
 
 #intr-1,
 #intr-2 {
-  background-image: url(../images/int-1.jpeg);
+  /* background-image: url(../images/int-1.jpeg); */
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 
 #intr-1 .left {
-  background-image: url(../images/wel-1.png);
+  /* background-image: url(../images/wel-1.png); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left;
@@ -80,7 +80,7 @@ section img {
 }
 
 #intr-1 .right {
-  background-image: url(../images/wel-2.png);
+  /* background-image: url(../images/wel-2.png); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -117,7 +117,7 @@ section img {
 }
 
 #intr-3 {
-  background-image: url(../images/bg-toc.png);
+  /* background-image: url(../images/bg-toc.png); */
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -125,7 +125,7 @@ section img {
 
 #intr-4,
 #intr-5 {
-  background-image: url(../images/int-2.png);
+  /* background-image: url(../images/int-2.png); */
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
