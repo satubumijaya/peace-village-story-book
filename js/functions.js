@@ -467,41 +467,22 @@ var i = 0;
 var scrolto = 0;
 
 function next() {
-  if (i == 0) {
-    $(".prev").show();
-  }
-  if (i < sections.length - 1) {
-    i++;
-    if (i == sections.length - 1) {
-      $(".next").hide();
-    }
-    $("html, body").animate(
-      {
-        scrollTop: sections[i].offsetTop,
-      },
-      1000
-    );
-  } else {
-    alert("end reached");
-  }
+  var scrollPos = $(window).scrollTop();
+  var windowHeight = $(window).height();
+  window.scrollTo({
+      top: scrollPos + windowHeight,
+      behavior: 'smooth',
+  });
 }
 function prev() {
-  if (i == sections.length - 1) {
-    $(".next").show();
-  }
-  if (i > 0) {
-    i--;
-    if (i == 0) {
-      $(".prev").show();
-    }
-    $("html, body").animate(
-      {
-        scrollTop: sections[i].offsetTop,
-      },
-      1000
-    );
-  }
+  var scrollPos = $(window).scrollTop();
+  var windowHeight = $(window).height();
+  window.scrollTo({
+      top: scrollPos - windowHeight,
+      behavior: 'smooth',
+  });
 }
+
 $("html").keydown(function (e) {
   if (e.which == "38") {
     prev();
@@ -510,6 +491,7 @@ $("html").keydown(function (e) {
     next();
   }
 });
+
 $(".next").click(function (e) {
   e.preventDefault();
   next();
