@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+
 const fileinclude = require('gulp-file-include');
 const server = require('browser-sync').create();
 const { watch, series } = require('gulp');
@@ -23,6 +25,7 @@ async function copyAssets() {
 // Build files html and reload server
 async function buildAndReload() {
     await includeHTML();
+    await buildStyles();
     // await copyAssets();
     reload();
 }
@@ -40,8 +43,15 @@ async function includeHTML() {
         )
         .pipe(gulp.dest(paths.scripts.dest));
 }
-
 exports.includeHTML = includeHTML;
+
+async function buildStyles() {
+    return gulp.src('./scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+};
+exports.buildStyles = buildStyles;
+
 
 exports.default = async function () {
     // Init serve files from the build folder
@@ -53,5 +63,8 @@ exports.default = async function () {
     // Build and reload at the first time
     buildAndReload();
     // Watch task
-    watch(['app/**/*'], series(buildAndReload));
+    watch([
+        './app/**/*',
+        './scss/**/*.scss'
+    ], series(buildAndReload));
 };
