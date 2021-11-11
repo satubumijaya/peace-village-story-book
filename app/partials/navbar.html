@@ -1,33 +1,35 @@
 <div class="navbar-right">
     <div class="nav-item">
-        <div class="brand"><img src="images/logo.png" alt="logo" /></div>
+        <div class="brand">
+            <a href="#">
+                <img src="images/logo.png" alt="logo" />
+            </a>
+        </div>
         <ul>
-            <li class="list-menu">
-                <a href="#"
-                    ><img src="images/icon-cover.png" class="icon" alt="" />
+            <!-- <li class="list-menu">
+                <a href="#">
+                    <img src="images/icon-cover.png" class="icon" alt="" />
                     <p>cover</p>
+                </a>
+            </li> -->
+             <li class="list-menu">
+                <a href="#" disabled class="prev"
+                    ><img src="images/icon-arrow-left.png" class="icon" alt="" disabled style="transform: rotate(90deg)"/>
+                    <p>previous chapter</p>
                 </a>
             </li>
             <li class="list-menu">
                 <a href="#" disabled class="next"
-                    ><img src="images/icon-arrow-right.png" class="icon" alt="" disabled />
+                    ><img src="images/icon-arrow-left.png" class="icon" alt="" disabled style="transform: rotate(-90deg)"/>
                     <p>next chapter</p>
                 </a>
             </li>
-            <li class="list-menu">
-                <a href="#" disabled class="prev"
-                    ><img src="images/icon-arrow-left.png" class="icon" alt="" disabled />
-                    <p>previous chapter</p>
-                </a>
-            </li>
             <li id="nav-toggle" class="list-menu">
-                <a href="#!" disabled
+                <a href="#" disabled
                     ><img src="images/icon-content.png" class="icon" alt="" />
                     <p>contents</p>
                 </a>
-            </li>
-            <li id="chapter" class="chapter">
-                <p>Chapter :</p>
+                <div id="chapter" class="chapter">
                 <ul class="submenu">
                     <li><a href="#st-1-1">1</a></li>
                     <li><a href="#st-2-1">2</a></li>
@@ -40,9 +42,10 @@
                     <li><a href="#st-9-1">9</a></li>
                     <li><a href="#st-10-1">10</a></li>
                 </ul>
-                <div class="img-scroll">
+                <!-- <div class="img-scroll">
                     <img src="images/icon-arrow.png" alt="" />
-                </div>
+                </div> -->
+            </div>
             </li>
             <li class="share list-menu">
                 <a href="#"
