@@ -9,6 +9,8 @@
   background: #355770d6;
   width: 67px;
   padding-top: 10px;
+  right: -67px;
+  transition: all 0.2s ease-in-out;
 }
 .navbar-right .nav-item ul {
   padding-top: 20px;
@@ -95,6 +97,138 @@
   height: auto;
   padding-top: auto;
   opacity: 1;
+}
+.navbar-right .navbar-toggle {
+  cursor: pointer;
+  width: 30px;
+  height: 86px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+  border-radius: 7px 0 0 7px;
+  background-color: #355770d6;
+  position: absolute;
+  display: flex;
+}
+.navbar-right .navbar-toggle .icon-container {
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+.navbar-right.expanded {
+  right: 0;
+}
+.navbar-right.expanded .icon-container {
+  transform: rotate(180deg);
+}
+
+.toc-list .sublist {
+  padding-left: 36px;
+}
+.toc-list .sublist .avatar img {
+  width: 100%;
+  margin-right: 0;
+}
+.toc-list .sublist .avatar img:hover {
+  filter: none;
+}
+.toc-list .sublist .story-link {
+  padding-right: 20px;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  align-items: end;
+  cursor: pointer;
+}
+.toc-list .sublist .story-link .name {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding-bottom: 0;
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.toc-list .sublist .story-link .line {
+  width: 30%;
+  position: relative;
+}
+.toc-list .sublist .story-link .line:after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  background: #fff;
+  height: 1px;
+  right: -50px;
+  z-index: 2;
+}
+.toc-list .sublist .story-link .avatar-container {
+  flex-grow: 1;
+  display: flex;
+}
+.toc-list .sublist .story-link .avatar-container .line {
+  flex-grow: 1;
+}
+.toc-list .sublist .story-link .avatar {
+  display: block;
+  width: 50px;
+  position: relative;
+}
+.toc-list .sublist .story-link .avatar img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: 0.2s all ease-in-out;
+}
+.toc-list .sublist .story-link:hover .avatar img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.toc-list img {
+  width: 10px;
+  margin-right: 10px;
+}
+
+ul.toc-list > li {
+  padding-bottom: 30px;
+}
+
+.toc .heavy-text {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+}
+.toc .image-left {
+  position: relative;
+  bottom: -4px;
+}
+.toc .image-left img {
+  height: 35px;
+}
+.toc .content-table {
+  width: 100%;
+}
+.toc .content-table p {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding: 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.toc-left {
+  width: 40%;
+}
+
+.toc-right {
+  width: 60%;
+}
+.toc-right .toc-list-wrapper {
+  width: 100%;
+  align-items: baseline;
+}
+.toc-right .toc-list-wrapper .toc-list {
+  width: 50%;
 }
 
 html {
@@ -251,18 +385,6 @@ section img {
   box-sizing: border-box;
 }
 
-.toc .content-table {
-  width: 100%;
-}
-
-.toc .content-table p {
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  margin: 0;
-  padding: 10px 0;
-  font-family: "Montserrat", sans-serif;
-}
-
 .content-section .title-story {
   background: #0b2844b5;
   padding: 5% 12%;
@@ -322,11 +444,6 @@ section img {
 
 .text-white {
   color: #ffffff;
-}
-
-.toc-list img {
-  width: 10px;
-  margin-right: 10px;
 }
 
 .heavy-text {
@@ -734,83 +851,6 @@ img.greyscale {
 
 .right .logo img {
   object-fit: contain;
-}
-
-.toc-list .sublist {
-  padding-left: 36px;
-}
-
-.toc-list .sublist .line {
-  width: 30%;
-  position: relative;
-}
-
-.toc-list .sublist .avatar img {
-  width: 100%;
-  margin-right: 0;
-}
-
-.toc-list .sublist .avatar img:hover {
-  filter: none;
-}
-
-.toc-list .sublist .line:after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 0;
-  bottom: -4px;
-  background: #fff;
-  height: 1px;
-}
-
-.toc-list .sublist li .avatar {
-  display: block;
-  width: 50px;
-  position: relative;
-  left: -50px;
-  bottom: 18px;
-}
-
-.toc-list .sublist li {
-  padding-top: 30px;
-}
-
-ul.toc-list > li {
-  padding-bottom: 30px;
-}
-
-.toc .heavy-text {
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.toc .image-left img {
-  height: 35px;
-}
-
-.toc .image-left {
-  position: relative;
-  bottom: -4px;
-}
-
-.toc-left {
-  width: 40%;
-}
-
-.toc-right {
-  width: 60%;
-}
-
-.toc-right .toc-list-wrapper {
-  width: 100%;
-  align-items: baseline;
-}
-
-.toc-right .toc-list-wrapper .toc-list {
-  width: 50%;
 }
 
 #intr-4 h3 {

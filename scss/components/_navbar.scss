@@ -6,6 +6,7 @@
 	background: #355770d6;
 	width: 67px;
 	padding-top: 10px;
+
 	.nav-item {
 		ul {
             padding-top: 20px;
@@ -84,6 +85,7 @@
 			border-top: 1px solid #355870;
 		}
 	}
+	
 	.nav-item.open {
 		ul {
 			#chapter {
@@ -107,6 +109,32 @@
 					}
 				}
 			}
+		}
+	}
+
+	.navbar-toggle{
+		cursor: pointer;
+		width: 30px;
+		height: 86px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -30px;
+		border-radius: 7px 0 0 7px;
+		background-color: #355770d6;
+		position: absolute;
+		display: flex;
+		.icon-container{
+			margin: auto;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+
+	right: -67px;
+	transition: all 0.2s ease-in-out;
+	&.expanded{
+		right: 0;
+		.icon-container{
+			transform: rotate(180deg);
 		}
 	}
 }

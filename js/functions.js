@@ -19,6 +19,12 @@ $(document).ready(function () {
   });
 });
 
+$(function(){
+  $('.navbar-right .navbar-toggle').click(function(){
+    $('.navbar-right').toggleClass('expanded');
+  });
+})
+
 const observerOptions = {
   root: null,
   rootMargin: "0px",
@@ -44,12 +50,12 @@ fadeElms.forEach((el) => observer.observe(el));
 
 // Navigation Toggle
 $(document).ready(function () {
-  $("#nav-toggle").on('mouseover', function () {
-    $(".nav-item").addClass("open");
+  $("#nav-toggle").on('click', function () {
+    $(".nav-item").toggleClass("open");
   });
-  $('#nav-toggle').on('mouseleave', function () {
-      $('.nav-item').removeClass('open');
-  });
+  // $('#nav-toggle').on('mouseleave', function () {
+      // $('.nav-item').removeClass('open');
+  // });
 });
 
 // next and previous button
