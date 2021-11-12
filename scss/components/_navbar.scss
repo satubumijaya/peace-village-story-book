@@ -1,0 +1,140 @@
+.navbar-right {
+	position: fixed;
+	height: 100vh;
+	z-index: 99;
+	right: 0;
+	background: #355770d6;
+	width: 67px;
+	padding-top: 10px;
+
+	.nav-item {
+		ul {
+            padding-top: 20px;
+			.list-menu {
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					text-align: center;
+					color: #84b4c7;
+					text-decoration: none;
+					text-transform: capitalize;
+                    padding: 16px 10px;
+					p {
+						margin: 0;
+						padding-top: 10px;
+						font-size: 13px;
+						overflow: hidden;
+						transition: all .2s ease;
+					}
+				}
+				border-bottom: 1px solid #507680;
+			}
+			#chapter {
+				text-align: center;
+				background: #69a0cfcc;
+				// display: none;
+				max-height: 0;
+				opacity: 0;
+				transition: all .4s ease;
+				// transition-delay: 0.2s;
+				overflow: hidden;
+				p {
+					font-size: 13px;
+					padding: 8px 0;
+					color: #355770;
+					font-family: 'Montserrat';
+					font-size: 11px;
+					text-decoration: none;
+					margin: 0;
+					transition: 0.2s all ease-in-out;
+				}
+				a {
+					color: #355770;
+					font-family: 'Montserrat';
+					font-size: 11px;
+					text-decoration: none;
+					margin: 0;
+					font-size: 18px;
+					font-weight: 600;
+					display: block;
+					padding: 10px 0;
+					cursor: pointer;
+				}
+				.submenu {
+					li {
+						border-bottom: 1px solid #355770;
+					}
+				}
+			}
+			.share {
+				border-bottom: 0;
+				border-top: 1px solid #507680;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		.brand {
+			text-align: center;
+		}
+		ul.submenu {
+			padding-top: 0;
+			border-top: 1px solid #355870;
+		}
+	}
+	
+	.nav-item.open {
+		ul {
+			#chapter {
+				// display: block;
+				max-height: 100%;
+				opacity: 1;
+			}
+			.list-menu {
+				a{
+					p{
+						height: 0;
+						padding-top: 0;
+						opacity: 0;
+					}
+				}
+				&#nav-toggle{
+					p{
+						height: auto;
+						padding-top: auto;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.navbar-toggle{
+		cursor: pointer;
+		width: 30px;
+		height: 86px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -30px;
+		border-radius: 7px 0 0 7px;
+		background-color: #355770d6;
+		position: absolute;
+		display: flex;
+		.icon-container{
+			margin: auto;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+
+	right: -67px;
+	transition: all 0.2s ease-in-out;
+	&.expanded{
+		right: 0;
+		.icon-container{
+			transform: rotate(180deg);
+		}
+	}
+}

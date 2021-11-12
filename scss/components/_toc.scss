@@ -1,0 +1,119 @@
+.toc-list {
+    .sublist {
+        padding-left: 36px;
+        .avatar {
+            img {
+                width: 100%;
+                margin-right: 0;
+                &:hover {
+                    filter: none;
+                }
+            }
+        }
+        .story-link {
+            padding-right: 20px;
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            align-items: end;
+            cursor: pointer;
+            .name {
+                font-size: 18px;
+                letter-spacing: 1.5px;
+                margin: 0;
+                padding-bottom: 0;
+                padding-top: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+            }
+            .line {
+                width: 30%;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    bottom: 0;
+                    background: #fff;
+                    height: 1px;
+                    right: -50px;
+                    z-index: 2;
+                }
+            }
+            .avatar-container {
+                flex-grow: 1;
+                display: flex;
+                .line {
+                    flex-grow: 1;
+                }
+            }
+            .avatar {
+                display: block;
+                width: 50px;
+                position: relative;
+                // left: -50px;
+                // bottom: 18px;
+                img {
+                    -webkit-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                    transition: 0.2s all ease-in-out;
+                }
+            }
+            &:hover {
+                .avatar {
+                    img {
+                        -webkit-filter: grayscale(0);
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+    img {
+        width: 10px;
+        margin-right: 10px;
+    }
+}
+ul.toc-list {
+    > li {
+        padding-bottom: 30px;
+    }
+}
+.toc {
+    .heavy-text {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .image-left {
+        img {
+            height: 35px;
+        }
+        position: relative;
+        bottom: -4px;
+    }
+    .content-table {
+        width: 100%;
+        p {
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            margin: 0;
+            padding: 10px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}
+.toc-left {
+    width: 40%;
+}
+.toc-right {
+    width: 60%;
+    .toc-list-wrapper {
+        width: 100%;
+        align-items: baseline;
+        .toc-list {
+            width: 50%;
+        }
+    }
+}
