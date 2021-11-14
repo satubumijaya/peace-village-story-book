@@ -75,8 +75,7 @@ $(window).on('load', function () {
 
         new ScrollMagic.Scene({
             triggerElement: this,
-            duration: '200%',
-            offset: '-50%',
+            duration: '300%',
         })
             .addIndicators({
                 name: 'Timeline',
