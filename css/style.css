@@ -1156,7 +1156,6 @@ section#st-3-13,
 #st-9-8,
 #st-9-9,
 #st-9-10,
-#st-9-13,
 #st-10-3,
 #st-10-4,
 #st-10-10,
@@ -1316,14 +1315,6 @@ section#st-6-14 .half-full-height-blue-right {
 #st-10-14 img {
   object-fit: contain;
   object-position: top;
-}
-
-#st-9-13 .bottom-overlay {
-  background: transparent;
-  max-width: 70%;
-  margin: auto;
-  bottom: 0;
-  padding-bottom: 2rem;
 }
 
 .card-box p.quote-author {
