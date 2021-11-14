@@ -37,6 +37,10 @@ d-flex {
   margin-bottom: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -519,14 +523,17 @@ section img {
 }
 
 .main-title-story {
+  font-family: "Montserrat", sans-serif;
   font-size: 72px;
-  font-weight: 900;
+  font-weight: 700;
   margin-bottom: 0;
 }
 
 .subtitle-story {
+  font-family: "Montserrat", sans-serif;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 500;
+  margin-top: 0;
 }
 
 .text-blue {
@@ -1193,11 +1200,6 @@ section#st-3-13,
 section#st-3-13 img {
   height: auto;
   object-fit: contain;
-}
-
-#st-3-13 .bottom-overlay {
-  background: transparent;
-  padding-bottom: 8rem;
 }
 
 .full-height {
