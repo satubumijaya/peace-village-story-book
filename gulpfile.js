@@ -13,9 +13,9 @@ const paths = {
 };
 
 // Reload Server
-async function reload() {
-    server.reload();
-}
+// async function reload() {
+    // server.reload();
+// }
 
 // Copy assets after build
 async function copyAssets() {
@@ -27,7 +27,7 @@ async function buildAndReload() {
     await includeHTML();
     await buildStyles();
     // await copyAssets();
-    reload();
+    // reload();
 }
 
 async function includeHTML() {

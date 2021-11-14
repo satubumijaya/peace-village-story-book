@@ -1,23 +1,17 @@
-AOS.init();
-$(function () {
-  AOS.init();
-});
-
-
 // Scroll Used
 
-var orgscroll = $(document).scrollTop(),
-  switchcheck = false;
+// var orgscroll = $(document).scrollTop(),
+  // switchcheck = false;
 
-$(document).ready(function () {
-  var myElement = $(".cross-top");
-  $(window).on("scroll", function () {
-    var st = $(this).scrollTop();
-    myElement.css({
-      opacity: 1 - st / 500,
-    });
-  });
-});
+// $(document).ready(function () {
+//   var myElement = $(".cross-top");
+//   $(window).on("scroll", function () {
+//     var st = $(this).scrollTop();
+//     myElement.css({
+//       opacity: 1 - st / 500,
+//     });
+//   });
+// });
 
 $(function(){
   $('.navbar-right .navbar-toggle').click(function(){
@@ -25,43 +19,41 @@ $(function(){
   });
 })
 
-const observerOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.7,
-};
+// const observerOptions = {
+//   root: null,
+//   rootMargin: "0px",
+//   threshold: 0.7,
+// };
 
-function observerCallback(entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      // fade in observed elements that are in view
-      entry.target.classList.replace("fadeOut", "fadeIn");
-    } else {
-      // fade out observed elements that are not in view
-      entry.target.classList.replace("fadeIn", "fadeOut");
-    }
-  });
-}
+// function observerCallback(entries, observer) {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       // fade in observed elements that are in view
+//       entry.target.classList.replace("fadeOut", "fadeIn");
+//     } else {
+//       // fade out observed elements that are not in view
+//       entry.target.classList.replace("fadeIn", "fadeOut");
+//     }
+//   });
+// }
 
-const observer = new IntersectionObserver(observerCallback, observerOptions);
+// const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-const fadeElms = document.querySelectorAll(".fade");
-fadeElms.forEach((el) => observer.observe(el));
+// const fadeElms = document.querySelectorAll(".fade");
+// fadeElms.forEach((el) => observer.observe(el));
 
 // Navigation Toggle
 $(document).ready(function () {
-  $("#nav-toggle").on('click', function () {
+  $("#nav-toggle > a").on('click', function (e) {
+    e.preventDefault();
     $(".nav-item").toggleClass("open");
   });
-  // $('#nav-toggle').on('mouseleave', function () {
-      // $('.nav-item').removeClass('open');
-  // });
 });
 
 // next and previous button
 
-var sections = $(".section");
-console.log(sections);
+// var sections = $(".section");
+// console.log(sections);
 var i = 0;
 var scrolto = 0;
 

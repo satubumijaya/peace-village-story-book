@@ -1,0 +1,42 @@
+d-flex{
+    display: flex;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-strech {
+    align-items: stretch;
+}
+
+.align-bottom {
+    align-items: flex-end;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+.mt-auto{
+    margin-top: auto
+}
+.mb-auto{
+    margin-bottom: auto
+}
+.ml-auto{
+    margin-left: auto
+}
+
+.my-auto{
+    margin-top:auto;
+    margin-bottom: auto;
+}
