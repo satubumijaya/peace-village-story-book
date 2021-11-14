@@ -2,10 +2,40 @@ $(window).on('load', function () {
     var ctrl = new ScrollMagic.Controller({
         globalSceneOptions: {},
     });
+    new ScrollMagic.Scene({
+        triggerElement: '#intr-1',
+        // offset: 1,
+        duration: '10%',
+        triggerHook: 'onLeave',
+    })
+        .on('leave', function () {
+            console.log('leeeeaving');
+            TweenLite.to('#intr-1 .intro-gate-left', 0.5, {
+                xPercent: -100,
+            });
+            TweenLite.to('#intr-1 .intro-gate-right', 0.5, {
+                xPercent: 100,
+            });
+        })
+        .on('enter', function () {
+            console.log('entering');
+            TweenLite.to('#intr-1 .intro-gate-left', 0.5, {
+                xPercent: 0,
+            });
+            TweenLite.to('#intr-1 .intro-gate-right', 0.5, {
+                xPercent: 0,
+            });
+        })
+        
+        .addTo(ctrl);
 
     $('.section').each(function (index, element) {
         var sectionBg = $(this).find('.section-bg.fixed');
         var sectionOverlay = $(this).find('.bg-overlay.fixed');
+        var logoLeft = $(this).find('.intro-logo-bottom-left');
+        var logoRight = $(this).find('.intro-logo-bottom-right');
+        var introGateLeft = $(this).find('.intro-gate-left');
+        var introGateRight = $(this).find('.intro-gate-right');
 
         var tl = new TimelineMax()
             .add(
@@ -20,7 +50,21 @@ $(window).on('load', function () {
                     // visibility: 'hidden',
                 }),
                 0
-            );
+            )
+            .add(
+                TweenMax.from(logoLeft, 0.5, {
+                    opacity: 0,
+                    // visibility: 'hidden',
+                }),
+                0
+            )
+            .add(
+                TweenMax.from(logoRight, 0.5, {
+                    opacity: 0,
+                    // visibility: 'hidden',
+                }),
+                0
+            )
 
         new ScrollMagic.Scene({
             triggerElement: this,
@@ -32,7 +76,14 @@ $(window).on('load', function () {
         new ScrollMagic.Scene({
             triggerElement: this,
             duration: '200%',
+            offset: '-50%',
         })
+            .addIndicators({
+                name: 'Timeline',
+                colorTrigger: 'gray',
+                colorStart: 'gray',
+                colorEnd: 'gray',
+            })
             .on('enter', function () {
                 $(element).addClass('active');
             })
@@ -46,12 +97,7 @@ $(window).on('load', function () {
             duration: '100%',
             offset: 10
         })
-            .addIndicators({
-                name: 'Timeline',
-                colorTrigger: 'gray',
-                colorStart: 'gray',
-                colorEnd: 'gray',
-            })
+            
             .on('enter', function () {
                 video = $(element).find('video').get(0);
                 if (video) {

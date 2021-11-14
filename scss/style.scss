@@ -59,10 +59,12 @@ section {
         height: 100%;
         background-position: center;
         background-size: cover;
-        visibility: hidden;
+        // visibility: hidden;
         // opacity: 0;
         // z-index: -2;
         // transition: all 0.2s ease-in-out;
+        // transition-delay: 0.1s;
+        // transition-property: visibility;
         &.greyscale {
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
@@ -73,39 +75,39 @@ section {
             left: 0;
         }
     }
-    .content-section{
+    .content-section {
+        z-index: 2;
         &.fixed {
             position: fixed;
             top: 0;
             left: 0;
         }
     }
-    .bg-overlay{
-        visibility: hidden;
+    .bg-overlay {
+        // visibility: hidden;
         // z-index: -1;
         // opacity: 0;
-        &.fixed{
+        &.fixed {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            
         }
     }
-    &.active{
-        .section-bg{
+    &.active {
+        .section-bg {
             // opacity: 1;
             visibility: visible;
         }
-        .bg-overlay{
+        .bg-overlay {
             // opacity: 1;
             visibility: visible;
         }
     }
 
-    .bg-video{
-        video{
+    .bg-video {
+        video {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -123,6 +125,38 @@ section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.intro-gate-left{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.intro-gate-right{
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.intro-logo-bottom-left {
+    position: fixed;
+    left: 5%;
+    bottom: 8%;
+    .logo {
+        img {
+            max-height: 120px;
+        }
+    }
+}
+.intro-logo-bottom-right {
+    position: fixed;
+    right: 5%;
+    bottom: 8%;
+    .logo {
+        img {
+            max-height: 90px;
+        }
+    }
 }
 
 /* section .image-fixed {
@@ -370,10 +404,6 @@ h4 {
     font-weight: 100;
 }
 
-
-
-
-
 .card-box {
     max-width: 45%;
 }
@@ -479,9 +509,14 @@ h4 {
     visibility: visible !important;
 }
 
-.image-left img {
+.image-left {
+    img {
     width: unset;
-    height: 23px;
+    // height: 23px;
+    margin-bottom: -4px;
+    height: 35px;
+    
+    }
 }
 
 .image-left {
@@ -929,7 +964,7 @@ section#st-3-13,
 #st-10-4,
 #st-10-10,
 #st-10-11,
-// #st-10-14 
+// #st-10-14
 {
     background-image: url(../images/bg-toc.png);
     background-position: center;
