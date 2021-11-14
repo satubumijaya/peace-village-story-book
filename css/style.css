@@ -294,6 +294,46 @@ ul.toc-list > li {
   width: 50%;
 }
 
+.section.book-layout {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.section.book-layout .content-section {
+  padding: 0;
+}
+.section.book-layout .content-section .text-container {
+  width: 40%;
+  max-width: 40%;
+  padding: 5%;
+}
+.section.book-layout .content-section .image-container {
+  height: 100%;
+  width: 50%;
+}
+.section.book-layout .content-section .image-container .book-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section.book-layout .section-bg.book-image {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 html {
   /* scroll-snap-type: mandatory; */
   /* scroll-snap-points-y: repeat(300px); */

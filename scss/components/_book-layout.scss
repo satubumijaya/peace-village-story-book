@@ -1,0 +1,43 @@
+.section.book-layout{
+    // background-image: url(../images/bg-toc.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    .content-section{
+        padding: 0;
+        .text-container{
+            width: 40%;
+            max-width: 40%;
+            padding: 5%;
+            // height:100%;
+        }
+        .image-container{
+            height: 100%;
+            width: 50%;
+            .book-image{
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom:0;
+                // width: 100%;
+                width: 50%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .section-bg.book-image{
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: auto;
+        bottom:0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

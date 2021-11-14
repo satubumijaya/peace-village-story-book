@@ -34,8 +34,6 @@ $(window).on('load', function () {
         var sectionOverlay = $(this).find('.bg-overlay.fixed');
         var logoLeft = $(this).find('.intro-logo-bottom-left');
         var logoRight = $(this).find('.intro-logo-bottom-right');
-        var introGateLeft = $(this).find('.intro-gate-left');
-        var introGateRight = $(this).find('.intro-gate-right');
 
         var tl = new TimelineMax()
             .add(
@@ -65,6 +63,15 @@ $(window).on('load', function () {
                 }),
                 0
             )
+        if($(this).hasClass('book-layout')){
+            var bookImage = $(this).find('.image-container .image');
+            tl.add(
+                TweenMax.from(bookImage, 0.5, {
+                    opacity: 0,
+                })
+                , 0
+            )
+        }
 
         new ScrollMagic.Scene({
             triggerElement: this,
