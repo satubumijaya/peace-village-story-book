@@ -44,7 +44,8 @@ $(function(){
 
 // Navigation Toggle
 $(document).ready(function () {
-  $("#nav-toggle").on('click', function () {
+  $("#nav-toggle > a").on('click', function (e) {
+    e.preventDefault();
     $(".nav-item").toggleClass("open");
   });
 });
