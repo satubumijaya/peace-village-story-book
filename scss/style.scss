@@ -411,7 +411,8 @@ h4 {
 }
 
 .half-full-height-blue-opacity {
-    background: #008ccb69;
+    // background-color: #008ccb69;
+    background-color: rgba(#0084c3, 0.5);
     position: absolute;
     left: 0;
     top: 0;
@@ -424,7 +425,8 @@ h4 {
 }
 
 .half-full-height-blue-opacity-right {
-    background: #008ccb69;
+    // background: #008ccb69;
+    background-color: rgba(#0084c3, 0.5);
     position: absolute;
     right: 0;
     top: 0;
