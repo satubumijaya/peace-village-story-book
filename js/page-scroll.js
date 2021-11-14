@@ -44,7 +44,7 @@ $(window).on('load', function () {
         new ScrollMagic.Scene({
             triggerElement: this,
             duration: '100%',
-            offset: 20
+            offset: 10
         })
             .addIndicators({
                 name: 'Timeline',
