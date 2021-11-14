@@ -1214,16 +1214,6 @@ section#close-1 {
   position: relative;
 }
 
-section#close-1:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #0b2844cc;
-}
-
 .img-scroll {
   position: absolute;
   width: 20px;
