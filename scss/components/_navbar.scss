@@ -1,13 +1,13 @@
 .navbar-right {
 	position: fixed;
-	height: 100vh;
+	height: 100%;
 	z-index: 99;
 	right: 0;
-	background: #355770d6;
+	background-color:rgba(#355770, 0.9);
 	width: 67px;
-	padding-top: 10px;
 
 	.nav-item {
+		padding-top: 10px;
 		ul {
             padding-top: 20px;
 			.list-menu {
@@ -20,7 +20,7 @@
 					color: #84b4c7;
 					text-decoration: none;
 					text-transform: capitalize;
-                    padding: 16px 10px;
+                    padding: 10px 10px;
 					p {
 						margin: 0;
 						padding-top: 10px;
@@ -120,7 +120,7 @@
 		transform: translateY(-50%);
 		left: -30px;
 		border-radius: 7px 0 0 7px;
-		background-color: #355770d6;
+		background-color:rgba(#355770, 0.9);
 		position: absolute;
 		display: flex;
 		.icon-container{
