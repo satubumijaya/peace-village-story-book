@@ -595,7 +595,7 @@ h4 {
   padding: 5%;
   box-sizing: border-box;
   background: black;
-  background: linear-gradient(94deg, rgba(0, 0, 0, 0.7763480392) 0%, rgba(255, 255, 255, 0.1180847339) 62%);
+  background: linear-gradient(94deg, rgba(0, 0, 0, 0.7763480392) 0%, rgba(0, 0, 0, 0) 62%);
 }
 
 .bottom-overlay-opacity {
@@ -608,7 +608,7 @@ h4 {
   padding: 5%;
   box-sizing: border-box;
   background: black;
-  background: linear-gradient(359deg, rgba(0, 0, 0, 0.7763480392) 0%, rgba(255, 255, 255, 0.1180847339) 62%);
+  background: linear-gradient(359deg, rgba(0, 0, 0, 0.7763480392) 0%, rgba(0, 0, 0, 0) 62%);
 }
 
 .story.regular {
