@@ -67,6 +67,7 @@
 					display: block;
 					padding: 10px 0;
 					cursor: pointer;
+					transition: 0.2s all ease-in-out;
 					&.active{
 						background-color: #0084C3;
 					}
