@@ -25,7 +25,7 @@
 					color: #84b4c7;
 					text-decoration: none;
 					text-transform: capitalize;
-                    padding: 10px 10px 8px 10px;
+                    padding: 10px 10px 9px 10px;
 					p {
 						margin: 0;
 						padding-top: 10px;
@@ -67,6 +67,9 @@
 					display: block;
 					padding: 10px 0;
 					cursor: pointer;
+					&.active{
+						background-color: #0084C3;
+					}
 				}
 				.submenu {
 					li {

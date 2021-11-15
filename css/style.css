@@ -79,7 +79,7 @@ d-flex {
   color: #84b4c7;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 10px 10px 8px 10px;
+  padding: 10px 10px 9px 10px;
 }
 .navbar-right .nav-item ul .list-menu a p {
   margin: 0;
@@ -118,6 +118,9 @@ d-flex {
   display: block;
   padding: 10px 0;
   cursor: pointer;
+}
+.navbar-right .nav-item ul #chapter a.active {
+  background-color: #0084C3;
 }
 .navbar-right .nav-item ul #chapter .submenu li {
   border-bottom: 1px solid #355770;

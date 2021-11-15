@@ -2,6 +2,8 @@ $(window).on('load', function () {
     var ctrl = new ScrollMagic.Controller({
         globalSceneOptions: {},
     });
+
+    /* intro gate scene */
     new ScrollMagic.Scene({
         triggerElement: '#intr-1',
         // offset: 1,
@@ -63,17 +65,18 @@ $(window).on('load', function () {
                     // visibility: 'hidden',
                 }),
                 0
-            )
-        if($(this).hasClass('book-layout')){
+            );
+        if ($(this).hasClass('book-layout')) {
             var bookImage = $(this).find('.image-container .image');
             tl.add(
                 TweenMax.from(bookImage, 0.5, {
                     opacity: 0,
-                })
-                , 0
-            )
+                }),
+                0
+            );
         }
 
+        /* section scrolling scene */
         new ScrollMagic.Scene({
             triggerElement: this,
             offset: -1,
@@ -99,16 +102,23 @@ $(window).on('load', function () {
             })
             .addTo(ctrl);
 
+        /* play and pause video scene */
         new ScrollMagic.Scene({
             triggerElement: this,
             duration: '100%',
-            offset: 10
+            offset: 10,
         })
-            
             .on('enter', function () {
                 video = $(element).find('video').get(0);
                 if (video) {
                     video.play();
+                }
+                const id = $(element).attr('id');
+                window.location.hash = id;
+                const idArr = id.split('-');
+                $('#chapter .submenu a').removeClass('active');
+                if (idArr[0] === 'st') {
+                    $(`#nav-st-${idArr[1]}`).addClass('active');
                 }
             })
             .on('leave', function () {
@@ -122,6 +132,7 @@ $(window).on('load', function () {
             // .setTween(tl)
             .addTo(ctrl);
 
+        /* fullpage scrolling scene */
         new ScrollMagic.Scene({
             triggerHook: 'onLeave',
             triggerElement: this,
@@ -140,6 +151,7 @@ $(window).on('load', function () {
                 }
             });
 
+        /* fullpage scrolling scene */
         new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook: 'onEnter',
