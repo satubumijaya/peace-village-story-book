@@ -7,9 +7,14 @@
 	width: 67px;
 
 	.nav-item {
-		padding-top: 10px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 		ul {
-            padding-top: 20px;
+            padding-top: 10px;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
 			.list-menu {
 				a {
 					display: flex;
@@ -20,11 +25,12 @@
 					color: #84b4c7;
 					text-decoration: none;
 					text-transform: capitalize;
-                    padding: 10px 10px;
+                    padding: 10px 10px 8px 10px;
 					p {
 						margin: 0;
 						padding-top: 10px;
 						font-size: 13px;
+						line-height: 15px;
 						overflow: hidden;
 						transition: all .2s ease;
 					}
@@ -68,17 +74,24 @@
 					}
 				}
 			}
+			.fullscreen-toggle{
+				border-bottom: 0;
+				border-top: 1px solid #507680;
+				margin-top: auto;
+			}
 			.share {
 				border-bottom: 0;
 				border-top: 1px solid #507680;
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: 0;
+				// position: absolute;
+				// margin-top: auto;
+				// left: 0;
+				// right: 0;
+				// bottom: 0;
 			}
 		}
 		.brand {
 			text-align: center;
+			padding-top: 10px;
 		}
 		ul.submenu {
 			padding-top: 0;

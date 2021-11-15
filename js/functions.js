@@ -1,7 +1,7 @@
 // Scroll Used
 
 // var orgscroll = $(document).scrollTop(),
-  // switchcheck = false;
+// switchcheck = false;
 
 // $(document).ready(function () {
 //   var myElement = $(".cross-top");
@@ -13,10 +13,35 @@
 //   });
 // });
 
-$(function(){
-  $('.navbar-right .navbar-toggle').click(function(){
+function fullscreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||
+    (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {
+      document.documentElement.requestFullScreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullScreen) {
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+}
+$(function () {
+  $('.navbar-right .navbar-toggle').click(function (e) {
+    e.preventDefault();
     $('.navbar-right').toggleClass('expanded');
   });
+  $('.fullscreen-toggle a').click(function(e) {
+    e.preventDefault();
+    fullscreen()
+  })
 })
 
 // const observerOptions = {
@@ -61,16 +86,17 @@ function next() {
   var scrollPos = $(window).scrollTop();
   var windowHeight = $(window).height();
   window.scrollTo({
-      top: scrollPos + windowHeight,
-      behavior: 'smooth',
+    top: scrollPos + windowHeight,
+    behavior: 'smooth',
   });
 }
+
 function prev() {
   var scrollPos = $(window).scrollTop();
   var windowHeight = $(window).height();
   window.scrollTo({
-      top: scrollPos - windowHeight,
-      behavior: 'smooth',
+    top: scrollPos - windowHeight,
+    behavior: 'smooth',
   });
 }
 

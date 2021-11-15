@@ -57,10 +57,15 @@ d-flex {
   transition: all 0.2s ease-in-out;
 }
 .navbar-right .nav-item {
-  padding-top: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .navbar-right .nav-item ul {
-  padding-top: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .navbar-right .nav-item ul .list-menu {
   border-bottom: 1px solid #507680;
@@ -74,12 +79,13 @@ d-flex {
   color: #84b4c7;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 10px 10px;
+  padding: 10px 10px 8px 10px;
 }
 .navbar-right .nav-item ul .list-menu a p {
   margin: 0;
   padding-top: 10px;
   font-size: 13px;
+  line-height: 15px;
   overflow: hidden;
   transition: all 0.2s ease;
 }
@@ -116,16 +122,18 @@ d-flex {
 .navbar-right .nav-item ul #chapter .submenu li {
   border-bottom: 1px solid #355770;
 }
+.navbar-right .nav-item ul .fullscreen-toggle {
+  border-bottom: 0;
+  border-top: 1px solid #507680;
+  margin-top: auto;
+}
 .navbar-right .nav-item ul .share {
   border-bottom: 0;
   border-top: 1px solid #507680;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 .navbar-right .nav-item .brand {
   text-align: center;
+  padding-top: 10px;
 }
 .navbar-right .nav-item ul.submenu {
   padding-top: 0;
