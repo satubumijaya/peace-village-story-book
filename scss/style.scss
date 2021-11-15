@@ -114,6 +114,13 @@ section {
             object-fit: cover;
         }
     }
+    .debug-id{
+        position: absolute;
+        z-index: 9999;
+        top: 10px;
+        left: 10px;
+        color: gray;
+    }
 }
 
 /* .container {
@@ -412,7 +419,7 @@ h4 {
 
 .half-full-height-blue-opacity {
     // background-color: #008ccb69;
-    background-color: rgba(#0084c3, 0.5);
+    background-color: rgba(#0084c3, 0.75);
     position: absolute;
     left: 0;
     top: 0;
@@ -426,7 +433,7 @@ h4 {
 
 .half-full-height-blue-opacity-right {
     // background: #008ccb69;
-    background-color: rgba(#0084c3, 0.5);
+    background-color: rgba(#0084c3, 0.75);
     position: absolute;
     right: 0;
     top: 0;
@@ -573,7 +580,7 @@ img.greyscale {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 5em 3em;
+    padding: 3em 3em;
 }
 
 .bottom-overlay .card-box {
