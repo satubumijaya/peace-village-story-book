@@ -86,6 +86,15 @@
         width: 10px;
         margin-right: 10px;
     }
+
+    .village-toc{
+        text-decoration: none;
+        color: #66aedd;
+        transition: 0.2s all ease-in-out;
+        &:hover{
+            color: #0084C3;
+        }
+    }
 }
 ul.toc-list {
     > li {
