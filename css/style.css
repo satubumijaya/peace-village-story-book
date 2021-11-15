@@ -333,6 +333,13 @@ ul.toc-list > li {
   background-position: center;
   background-repeat: no-repeat;
 }
+.section.book-layout.reversed .content-section {
+  flex-direction: row-reverse;
+}
+.section.book-layout.reversed .section-bg.book-image {
+  left: 0;
+  right: auto;
+}
 
 html {
   /* scroll-snap-type: mandatory; */

@@ -40,4 +40,13 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+    &.reversed{
+        .content-section{
+            flex-direction: row-reverse;;
+        }
+        .section-bg.book-image{
+            left: 0;
+            right: auto;
+        }
+    }
 }
