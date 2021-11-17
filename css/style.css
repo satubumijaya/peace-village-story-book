@@ -361,6 +361,18 @@ ul.toc-list > li {
   right: auto;
 }
 
+.image-scroll-group .content-section {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.image-scroll-group.active .section {
+  visibility: visible;
+}
+.image-scroll-group.active .content-section {
+  position: fixed;
+  opacity: 1;
+}
+
 #close-1 {
   visibility: visible;
 }

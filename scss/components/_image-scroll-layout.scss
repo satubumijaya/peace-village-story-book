@@ -1,0 +1,15 @@
+.image-scroll-group{
+    .content-section{
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    &.active{
+        .section{
+            visibility: visible;
+        }
+        .content-section{
+            position: fixed;
+            opacity: 1;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+// const { active } = require('browser-sync');
+
 $(window).on('load', function () {
     var ctrl = new ScrollMagic.Controller({
         globalSceneOptions: {},
@@ -28,9 +30,24 @@ $(window).on('load', function () {
                 xPercent: 0,
             });
         })
-        
-        .addTo(ctrl);
 
+        .addTo(ctrl);
+    $('.image-scroll-group').each(function(index, element){
+            sectionCount = $(this).find('.section').length;
+            new ScrollMagic.Scene({
+                triggerElement: this,
+                duration: sectionCount * $(window).height(),
+                // offset: window.innerHeight * -1,
+                triggerHook: 0.5,
+            })
+                .on('enter', function () {
+                    $(element).addClass('active');
+                })
+                .on('leave', function () {
+                    $(element).removeClass('active');
+                })
+                .addTo(ctrl);
+    })
     $('.section').each(function (index, element) {
         $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
         var sectionBg = $(this).find('.section-bg.fixed');
@@ -66,6 +83,8 @@ $(window).on('load', function () {
                 }),
                 0
             );
+
+
         if ($(this).hasClass('book-layout')) {
             var bookImage = $(this).find('.image-container .image');
             tl.add(
@@ -75,6 +94,7 @@ $(window).on('load', function () {
                 0
             );
         }
+
         if ($(this).attr('id') === 'close-1') {
             var blueOverlay = $(this).find('.blue-overlay');
             tl.add(
@@ -100,12 +120,24 @@ $(window).on('load', function () {
         })
             .setTween(tl)
             .addTo(ctrl);
+        
+
+        /* active inactive section */
+        let activeDuration = '300%';
+        if ($(this).attr('id') === 'close-2') {
+            activeDuration = '200%';
+        }
+        if ($(this).hasClass('image-scroll-layout')) {
+            const imageCount = $(this).find('.image-scroll div').length;
+            activeDuration = `${imageCount + 3}00%`;
+        }
 
         new ScrollMagic.Scene({
             triggerElement: this,
-            duration: $(this).attr('id') === 'close-2' ? '200%' : '300%',
-            offset: window.innerHeight*-1,
-            triggerHook: 0.95
+            duration: activeDuration,
+            offset: window.innerHeight * -1,
+            triggerHook: 0.95,
+            // triggerHook: 0.5,
         })
             .addIndicators({
                 name: `Timeline ${$(this).attr('id')}`,
