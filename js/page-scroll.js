@@ -60,8 +60,8 @@ $(window).on('load', function () {
                 0
             )
             .add(
-                TweenMax.from(logoRight, 0.5, {
-                    opacity: 0,
+                TweenMax.to(logoRight, 0.5, {
+                    opacity: 1,
                     // visibility: 'hidden',
                 }),
                 0
@@ -72,6 +72,23 @@ $(window).on('load', function () {
                 TweenMax.from(bookImage, 0.5, {
                     opacity: 0,
                 }),
+                0
+            );
+        }
+        if ($(this).attr('id') === 'close-1') {
+            var blueOverlay = $(this).find('.blue-overlay');
+            tl.add(
+                TweenMax.fromTo(
+                    blueOverlay,
+                    1,
+                    {
+                        opacity: 1,
+                    },
+                    {
+                        opacity: 0.6,
+                        delay: 1,
+                    }
+                ),
                 0
             );
         }

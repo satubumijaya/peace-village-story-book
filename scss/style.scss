@@ -8,6 +8,7 @@
 @import 'components/navbar';
 @import 'components/toc';
 @import 'components/book-layout';
+@import 'components/closing';
 
 html {
     /* scroll-snap-type: mandatory; */
@@ -511,7 +512,16 @@ h4 {
 }
 
 .blue-overlay {
-    background: #0e2e4a9e;
+    // background: #0e2e4a9e;
+    background-color:#0b2844;
+    opacity: 0.6;
+    &.fixed{
+        // position: fixed;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .half-full-height-blue p.quote {
