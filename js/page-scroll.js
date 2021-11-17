@@ -103,10 +103,12 @@ $(window).on('load', function () {
 
         new ScrollMagic.Scene({
             triggerElement: this,
-            duration: '300%',
+            duration: $(this).attr('id') === 'close-2' ? '200%' : '300%',
+            offset: window.innerHeight*-1,
+            triggerHook: 0.95
         })
             .addIndicators({
-                name: 'Timeline',
+                name: `Timeline ${$(this).attr('id')}`,
                 colorTrigger: 'gray',
                 colorStart: 'gray',
                 colorEnd: 'gray',
