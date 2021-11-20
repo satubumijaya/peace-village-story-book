@@ -1,6 +1,12 @@
-// const { active } = require('browser-sync');
 
+// observer.observe();
 $(window).on('load', function () {
+    const observer = lozad('.lozad', {
+        loaded: function(el) {
+            el.classList.add('loaded');
+        }
+    });
+
     var ctrl = new ScrollMagic.Controller({
         globalSceneOptions: {},
     });
@@ -149,6 +155,12 @@ $(window).on('load', function () {
             })
             .on('enter', function () {
                 $(element).addClass('active');
+                $(element).find('.lozad').each(function(el,i){
+                    observer.triggerLoad($(this).get(0))
+                })
+                // const el = document.querySelector('.section.active .lozad');
+                // console.log(el)
+                // observer.triggerLoad(el);
             })
             .on('leave', function () {
                 $(element).removeClass('active');
