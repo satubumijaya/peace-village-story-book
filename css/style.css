@@ -457,6 +457,17 @@ section .content-section.fixed {
   top: 0;
   left: 0;
 }
+section .content-section p a {
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px dotted #FFF;
+  transition: all 0.2s ease-in-out;
+}
+section .content-section p a:hover {
+  color: #84b4c7;
+  border-color: #84b4c7;
+}
 section .bg-overlay.fixed {
   position: fixed;
   top: 0;

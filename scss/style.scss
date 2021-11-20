@@ -89,6 +89,17 @@ section {
             top: 0;
             left: 0;
         }
+        p a{
+            color: #FFF;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px dotted #FFF;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                color: #84b4c7;
+                border-color: #84b4c7;
+            }
+        }
     }
     .bg-overlay {
         // visibility: hidden;
