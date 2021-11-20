@@ -238,4 +238,26 @@ $(window).on('load', function () {
                 } // scene end
             });
     }); //hero each
+
+    var resizeTimer;
+    let currentHash = ''
+    $(window).resize(function () {
+        if (resizeTimer) {
+            clearTimeout(resizeTimer); // clear any previous pending timer
+        } else {
+            // must be first resize event in a series
+            currentHash = window.location.hash;
+            console.log('current hash', currentHash);
+            $('body').addClass('resize');
+        }
+        // set new timer
+        resizeTimer = setTimeout(function() {
+            window.location.hash = currentHash;
+            $('body').removeClass('resize');
+            currentHash = '';
+            resizeTimer = null;
+            // put your resize logic here and it will only be called when 
+            // there's been a pause in resize events
+        }, 1000);  
+    });
 }); //window onload

@@ -46,6 +46,23 @@ d-flex {
   margin-bottom: auto;
 }
 
+.resize-overlay {
+  z-index: 9999999;
+  background-color: rgba(11, 40, 68, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.2s opacity ease-in-out;
+  visibility: hidden;
+}
+
+.resize .resize-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
 .navbar-right {
   position: fixed;
   height: 100%;

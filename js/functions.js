@@ -39,18 +39,8 @@ $(function () {
     $('.navbar-right').toggleClass('expanded');
   });
   $('.fullscreen-toggle a').click(function(e) {
-    // const id = window.location.hash;
     e.preventDefault();
     fullscreen();
-    // console.log($(id).offset().top);
-    // window.location.hash = id
-    $([document.documentElement, document.body]).animate(
-        {
-            // scrollTop: $(id).offset().top,
-            scrollTop: 0,
-        },
-        0
-    );
   })
 })
 
