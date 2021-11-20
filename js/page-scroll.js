@@ -129,9 +129,9 @@ $(window).on('load', function () {
         
 
         /* active inactive section */
-        let activeDuration = '300%';
+        let activeDuration = '200%';
         if ($(this).attr('id') === 'close-2') {
-            activeDuration = '200%';
+            activeDuration = '100%';
         }
         if ($(this).hasClass('image-scroll-layout')) {
             const imageCount = $(this).find('.image-scroll div').length;
@@ -140,11 +140,10 @@ $(window).on('load', function () {
 
         new ScrollMagic.Scene({
             triggerElement: this,
-            // duration: activeDuration,
-            duration: '200%',
+            duration: activeDuration,
             // offset: window.innerHeight * -1,
-            offset: '-100%',
-            triggerHook: 0.5,
+            // offset: '-100%',
+            triggerHook: 0.95,
             // triggerHook: 0.5,
         })
             .addIndicators({
@@ -179,7 +178,9 @@ $(window).on('load', function () {
                     video.play();
                 }
                 const id = $(element).attr('id');
-                window.location.hash = id;
+                // window.location.hash = id;
+                history.replaceState(null, null, `#${id}`);
+
                 const idArr = id.split('-');
                 $('#chapter .submenu a').removeClass('active');
                 if (idArr[0] === 'st') {
