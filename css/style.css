@@ -321,6 +321,9 @@ ul.toc-list > li {
 }
 .section.book-layout .content-section {
   padding: 0;
+  position: fixed;
+  opacity: 0;
+  transition: 1s opacity ease-in-out;
 }
 .section.book-layout .content-section .text-container {
   width: 30%;
@@ -359,6 +362,10 @@ ul.toc-list > li {
 .section.book-layout.reversed .section-bg.book-image {
   left: 0;
   right: auto;
+}
+
+.section.active + .section.section.book-layout.active .content-section {
+  opacity: 1;
 }
 
 .image-scroll-group .content-section {

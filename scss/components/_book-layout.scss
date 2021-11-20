@@ -6,6 +6,9 @@
 
     .content-section{
         padding: 0;
+        position: fixed;
+        opacity: 0;
+        transition: 1s opacity ease-in-out;
         .text-container{
             width: 30%;
             max-width: 40%;
@@ -49,4 +52,15 @@
             right: auto;
         }
     }
+
+    // &.active{
+    //     .content-section{
+    //         opacity: 1;
+    //     }
+    // }
+}
+.section.active + .section.section.book-layout.active{
+    .content-section{
+            opacity: 1;
+        }
 }

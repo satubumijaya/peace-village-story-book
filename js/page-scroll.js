@@ -134,9 +134,10 @@ $(window).on('load', function () {
 
         new ScrollMagic.Scene({
             triggerElement: this,
-            duration: activeDuration,
+            // duration: activeDuration,
+            duration: '200%',
             // offset: window.innerHeight * -1,
-            offset: '-50%',
+            offset: '-100%',
             triggerHook: 0.5,
             // triggerHook: 0.5,
         })
