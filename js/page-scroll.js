@@ -1,10 +1,9 @@
-
 // observer.observe();
 $(window).on('load', function () {
     const observer = lozad('.lozad', {
-        loaded: function(el) {
+        loaded: function (el) {
             el.classList.add('loaded');
-        }
+        },
     });
 
     var ctrl = new ScrollMagic.Controller({
@@ -38,22 +37,22 @@ $(window).on('load', function () {
         })
 
         .addTo(ctrl);
-    $('.image-scroll-group').each(function(index, element){
-            sectionCount = $(this).find('.section').length;
-            new ScrollMagic.Scene({
-                triggerElement: this,
-                duration: sectionCount * $(window).height(),
-                // offset: window.innerHeight * -1,
-                triggerHook: 0.5,
+    $('.image-scroll-group').each(function (index, element) {
+        sectionCount = $(this).find('.section').length;
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            duration: sectionCount * $(window).height(),
+            // offset: window.innerHeight * -1,
+            triggerHook: 0.5,
+        })
+            .on('enter', function () {
+                $(element).addClass('active');
             })
-                .on('enter', function () {
-                    $(element).addClass('active');
-                })
-                .on('leave', function () {
-                    $(element).removeClass('active');
-                })
-                .addTo(ctrl);
-    })
+            .on('leave', function () {
+                $(element).removeClass('active');
+            })
+            .addTo(ctrl);
+    });
     $('.section').each(function (index, element) {
         $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
         var sectionBg = $(this).find('.section-bg.fixed');
@@ -90,7 +89,6 @@ $(window).on('load', function () {
                 0
             );
 
-
         if ($(this).hasClass('book-layout')) {
             var bookImage = $(this).find('.image-container .image');
             tl.add(
@@ -126,7 +124,6 @@ $(window).on('load', function () {
         })
             .setTween(tl)
             .addTo(ctrl);
-        
 
         /* active inactive section */
         let activeDuration = '200%';
@@ -141,10 +138,7 @@ $(window).on('load', function () {
         new ScrollMagic.Scene({
             triggerElement: this,
             duration: activeDuration,
-            // offset: window.innerHeight * -1,
-            // offset: '-100%',
             triggerHook: 0.95,
-            // triggerHook: 0.5,
         })
             .addIndicators({
                 name: `Timeline ${$(this).attr('id')}`,
@@ -154,12 +148,11 @@ $(window).on('load', function () {
             })
             .on('enter', function () {
                 $(element).addClass('active');
-                $(element).find('.lozad').each(function(el,i){
-                    observer.triggerLoad($(this).get(0))
-                })
-                // const el = document.querySelector('.section.active .lozad');
-                // console.log(el)
-                // observer.triggerLoad(el);
+                $(element)
+                    .find('.lozad')
+                    .each(function (el, i) {
+                        observer.triggerLoad($(this).get(0));
+                    });
             })
             .on('leave', function () {
                 $(element).removeClass('active');
@@ -207,7 +200,7 @@ $(window).on('load', function () {
             .addTo(ctrl) // scene end
             .on('leave', function (event) {
                 if (event.scrollDirection === 'REVERSE') {
-                    TweenLite.to(window, 1, {
+                    TweenLite.to(window, 1.3, {
                         scrollTo: {
                             y: $(window).height() * (index - 1),
                             autoKill: false,
@@ -223,24 +216,22 @@ $(window).on('load', function () {
             triggerHook: 'onEnter',
             offset: 1,
         })
-            // .setTween(tl)
             .addTo(ctrl)
             .on('enter', function (event) {
                 if (event.scrollDirection === 'FORWARD') {
-                    // $(element).addClass('active');
-                    TweenLite.to(window, 1, {
+                    TweenLite.to(window, 1.3, {
                         scrollTo: {
                             y: $(element).offset().top,
                             autoKill: false,
                         },
                         ease: Power4.easeOut,
-                    });
+                    })
                 } // scene end
             });
     }); //hero each
 
     var resizeTimer;
-    let currentHash = ''
+    let currentHash = '';
     $(window).resize(function () {
         if (resizeTimer) {
             clearTimeout(resizeTimer); // clear any previous pending timer
@@ -251,13 +242,13 @@ $(window).on('load', function () {
             $('body').addClass('resize');
         }
         // set new timer
-        resizeTimer = setTimeout(function() {
+        resizeTimer = setTimeout(function () {
             window.location.hash = currentHash;
             $('body').removeClass('resize');
             currentHash = '';
             resizeTimer = null;
-            // put your resize logic here and it will only be called when 
+            // put your resize logic here and it will only be called when
             // there's been a pause in resize events
-        }, 1000);  
+        }, 1000);
     });
 }); //window onload

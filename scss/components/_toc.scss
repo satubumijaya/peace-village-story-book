@@ -27,7 +27,7 @@
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 600;
                 transition: 0.2s all ease-in-out;
-                color: #FFF;
+                color: #fff;
                 text-decoration: none;
             }
             .line {
@@ -71,11 +71,11 @@
                         filter: grayscale(0);
                     }
                 }
-                .name{
+                .name {
                     color: #66aedd;
                 }
-                .line{
-                    &:after{
+                .line {
+                    &:after {
                         background-color: #66aedd;
                     }
                 }
@@ -87,12 +87,12 @@
         margin-right: 10px;
     }
 
-    .village-toc{
+    .village-toc {
         text-decoration: none;
         color: #66aedd;
         transition: 0.2s all ease-in-out;
-        &:hover{
-            color: #0084C3;
+        &:hover {
+            color: #0084c3;
         }
     }
 }
@@ -102,7 +102,7 @@ ul.toc-list {
     }
 }
 .toc {
-    .toc-title{
+    .toc-title {
         display: flex;
         margin-right: 40px;
     }
@@ -144,5 +144,10 @@ ul.toc-list {
         .toc-list {
             width: 50%;
         }
+    }
+}
+.heading-toc {
+    a {
+        border-bottom: 0!important;
     }
 }

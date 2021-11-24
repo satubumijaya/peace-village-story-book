@@ -108,7 +108,7 @@ d-flex {
 }
 .navbar-right .nav-item ul #chapter {
   text-align: center;
-  background: #69a0cfcc;
+  background-color: transparent;
   max-height: 0;
   opacity: 0;
   transition: all 0.4s ease;
@@ -136,9 +136,10 @@ d-flex {
   padding: 10px 0;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
+  background: rgba(105, 160, 207, 0.6);
 }
 .navbar-right .nav-item ul #chapter a.active {
-  background-color: #0084C3;
+  background-color: rgba(0, 132, 195, 0.6);
 }
 .navbar-right .nav-item ul #chapter .submenu li {
   border-bottom: 1px solid #355770;
@@ -225,7 +226,7 @@ d-flex {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   transition: 0.2s all ease-in-out;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .toc-list .sublist .story-link .line {
@@ -280,7 +281,7 @@ d-flex {
   transition: 0.2s all ease-in-out;
 }
 .toc-list .village-toc:hover {
-  color: #0084C3;
+  color: #0084c3;
 }
 
 ul.toc-list > li {
@@ -329,6 +330,10 @@ ul.toc-list > li {
 }
 .toc-right .toc-list-wrapper .toc-list {
   width: 50%;
+}
+
+.heading-toc a {
+  border-bottom: 0 !important;
 }
 
 .section.book-layout {

@@ -39,7 +39,8 @@
 			}
 			#chapter {
 				text-align: center;
-				background: #69a0cfcc;
+				background-color: transparent;
+				// background: #69a0cfcc;
 				// display: none;
 				max-height: 0;
 				opacity: 0;
@@ -68,8 +69,9 @@
 					padding: 10px 0;
 					cursor: pointer;
 					transition: 0.2s all ease-in-out;
+					background: rgba(#69a0cf, 0.6);
 					&.active{
-						background-color: #0084C3;
+						background-color: rgba(#0084C3,0.6);
 					}
 				}
 				.submenu {
