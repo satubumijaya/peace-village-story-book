@@ -18,6 +18,8 @@
         .image-container{
             height: 100%;
             width: 60%;
+            background-position: center;
+            background-size: cover;
             .book-image{
                 position: fixed;
                 top: 0;
@@ -58,9 +60,23 @@
     //         opacity: 1;
     //     }
     // }
+
+    @include media-breakpoint-down(md){
+        .content-section {
+            flex-direction: column-reverse;
+            .text-container{
+                max-width: 100%;
+                width: auto;
+                padding: 40px 20px;
+            }
+            .image-container{
+                width: 100%;
+            }
+        }
+    }
 }
 .section.active + .section.section.book-layout.active{
-    .content-section{
-            opacity: 1;
-        }
+.content-section{
+        opacity: 1;
+    }
 }
