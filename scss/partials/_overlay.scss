@@ -54,7 +54,7 @@
     padding: 5%;
     box-sizing: border-box;
     background: rgb(0, 0, 0);
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.7763480392156863) 0%, rgba(0, 0, 0, 0) 62%);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 62%);
 }
 
 .bg-blue-overlay {
@@ -62,9 +62,18 @@
     // z-index: 9;
     background-size: cover;
 }
+
 .half-blue-left-overlay {
     // background: url('../images/blue-overlay.png');
     background: linear-gradient(90deg, rgba($color-blue-dark, 1) 0%, rgba($color-blue-dark, 0) 80%);
+    background-size: cover;
+    @include media-breakpoint-down(md){
+        background: linear-gradient(360deg, rgba($color-blue-dark, 1) 0%, rgba($color-blue-dark, 0) 80%);
+    }
+}
+
+.half-blue-right-overlay {
+    background: linear-gradient(-90deg, rgba($color-blue-dark, 1) 0%, rgba($color-blue-dark, 0) 80%);
     background-size: cover;
     @include media-breakpoint-down(md){
         background: linear-gradient(360deg, rgba($color-blue-dark, 1) 0%, rgba($color-blue-dark, 0) 80%);

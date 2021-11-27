@@ -73,6 +73,12 @@
                 width: 100%;
             }
         }
+
+        &.reversed{
+            .content-section {
+                flex-direction: column-reverse;
+            }
+        }
     }
 }
 .section.active + .section.section.book-layout.active{
