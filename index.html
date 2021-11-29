@@ -26,13 +26,18 @@
         <link rel="stylesheet" href="css/animate.css" />
         <link rel="stylesheet" href="dist/aos.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             .section {
                 visibility: hidden;
             }
+            .section.origin,
+            .section.fp-completely {
+                visibility: visible;
+            }
             .section.active {
                 visibility: visible;
-                z-index: 2;
+                /* z-index: 2; */
             }
         </style>
         <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -53,7 +58,7 @@
     </div>
     <div class="nav-item">
         <div class="brand">
-            <a href="#">
+            <a href="">
                 <img src="images/logo.png" alt="logo" />
             </a>
         </div>
@@ -117,9 +122,10 @@
 
 
         <div class="container" id="fullpage"><section id="intr-1" class="section" data-section="0">
-    <div class="section-bg image-bg fixed lozad" data-background-image="images/int-1.jpeg"></div>
+    <div class="section-bg image-bg fixed lozad" data-background-image="images/int-1.jpeg" style="background-image:url(images/int-1.jpeg)"></div>
     <!-- <div class="content-section align-strech"> -->
-        <div class="left half-width intro-gate-left cross-top lozad" data-background-image="images/wel-1.png">
+        <div class="left half-width intro-gate-left cross-top lozad" data-background-image="images/wel-1.png"
+        >
             <div class="intr-left-top">
                 <h5 class="">
                     <div class="image-left">
@@ -127,7 +133,7 @@
                     </div>
                     PEACE VILLAGE
                 </h5>
-                <h4 class="text-thin m-0 italic" style="font-size:36px">
+                <h4 class="text-thin m-0 italic">
                     Women-led initiative to promote peaceful and resilient communities in Indonesia
                 </h4>
             </div>
@@ -148,8 +154,8 @@
     </div>
 </section>
 
-<section id="intr-2" class="section " data-section="0">
-    <div class="section-bg lozad fixed" data-background-image="images/int-1.jpeg"></div>
+<section id="intr-2" class="section " data-section="0" >
+    <div class="section-bg lozad fixed" data-background-image="images/int-1.jpeg" style="background-image:url(images/int-1.jpeg)"></div>
         <div class="intro-logo-bottom-left">
             <div class="logo">
                 <img class="lozad" data-src="images/logo-wf-white.png" alt="logo" />
@@ -446,7 +452,7 @@
         </div> -->
 <!-- </section> -->
  <section id="vo-1-1" class="section" data-section="0">
-    <div class="section-bg lazyload fixed" data-bg="images/int-8.jpeg"></div>
+    <div class="section-bg lazyload fixed" data-background-image="images/int-8.jpeg"></div>
     <div class="section-bg blue-overlay fixed"></div>
     <!-- <img class="lazyload" data-src="images/int-8.jpeg" alt="img-2" /> -->
     <div class="cross">
@@ -462,7 +468,7 @@
     </div>
 </section>
 
-<section id="vo-1-2" class="section video-scroll" data-section="0">
+<section id="vo-1-2" class="section video-scroll fp-auto-height" data-section="0">
     <!-- <video id="v-intr-13" class="video-background" loop muted>
         </video> -->
     <div class="bg-video section-bg  fixed">
@@ -559,7 +565,7 @@
     </div>
 </section>
 
-<section id="st-1-6" class="section video-scroll" data-section="0">
+<section id="st-1-6" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/t3Mcw38hxPY?playlist=t3Mcw38hxPY&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S01_PV_ACTIVITY_FADHILAH_V2.mp4" muted loop playsinline></video>
@@ -644,7 +650,7 @@
     </div>
 </section>
 
-<section id="st-1-10" class="section video-scroll" data-section="0">
+<section id="st-1-10" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <video class="lozad" data-src="video/S01_PV_COMMENTS_FADHILAH_V2.mp4" controls playsinline></video>
     </div>
@@ -678,8 +684,8 @@
 </section>
 
 <section id="st-1-13" class="section" data-section="0">
-    <div class="section-bg image-bg lozad fixed" data-background-image="images/st-1/st1-10.jpeg">
-        <img class="lozad" data-src="images/st-1/st1-11.jpeg" alt="img-2" />
+    <div class="section-bg image-bg lozad fixed" data-background-image="images/st-1/st1-11.jpeg">
+        <!-- <img class="lozad" data-src="images/st-1/st1-11.jpeg" alt="img-2" /> -->
     </div>
     <div class="content-section align-bottom">
         <div class="bottom-overlay d-flex justify-center" data-aos="fade-bottom" data-aos-duration="2000">
@@ -716,7 +722,7 @@
     </div>
 </section>
 
-<section id="st-2-3" class="section video-scroll" data-section="0">
+<section id="st-2-3" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/oJpVODakT68?playlist=oJpVODakT68&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/oJpVODakT68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
@@ -842,7 +848,7 @@
     </div>
 </section>
 
-<section id="st-2-11" class="section video-scroll" data-section="0">
+<section id="st-2-11" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <video class="lozad" data-src="video/S02_PV_COMMENTS_ISTIBSYARAH_V2.mp4" controls playsinline></video>
     </div>
@@ -962,7 +968,7 @@
     </div>
 </section>
 
-<section id="st-3-6" class="section video-scroll" data-section="0">
+<section id="st-3-6" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe width="1664" height="770" src="https://www.youtube.com/embed/RCc0GbGsaoQ?playlist=RCc0GbGsaoQ&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S03_PV_ACTIVITY_HASANAH_V2.mp4" muted loop playsinline></video>
@@ -1109,7 +1115,7 @@
         </div>
     </div>
 </section> <section id="vo-2-1" class="section" data-section="0">
-    <div class="section-bg image-bg lazyload fixed" data-bg="images/vo-prancak.jpeg"></div>
+    <div class="section-bg image-bg lazyload fixed" data-background-image="images/vo-prancak.jpeg"></div>
     <div class="section-bg blue-overlay fixed"></div>
     <div class="cross">
         <div class="content-section">
@@ -1121,7 +1127,7 @@
     </div>
 </section>
 
-<section id="vo-2-2" class="section video-scroll" data-section="0">
+<section id="vo-2-2" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lazyload" width="1664" height="770" data-src="https://www.youtube.com/embed/7yeFEcijvxo?playlist=7yeFEcijvxo&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lazyload" src="video/VL02_VILLAGE_PRANCAK_V2.mp4" muted loop playsinline></video>
@@ -1249,7 +1255,7 @@
     </div>
 </section>
 
-<section id="st-4-8" class="section video-scroll" data-section="0">
+<section id="st-4-8" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/ei2iz_3shDQ?playlist=ei2iz_3shDQ&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S04_PV_ACTIVITY_MARIAULFA_V2.mp4" muted loop playsinline></video>
@@ -1411,7 +1417,7 @@
     </div>
 </section>
 
-<section id="st-5-6" class="section video-scroll" data-section="0">
+<section id="st-5-6" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/JWyMWs4Y-3c?playlist=JWyMWs4Y-3c&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S05_PV_ACTIVITY_ARIFAH_V2.mp4" muted loop playsinline></video>
@@ -1523,7 +1529,7 @@
     </div>
 </section>
 
-<section id="st-5-11" class="section video-scroll" data-section="0">
+<section id="st-5-11" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/ZJFeoNzUBWE?playlist=ZJFeoNzUBWE&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S05_PV_INTERVIEW_ARIFAH_V2.mp4" controls loop playsinline></video>
@@ -1580,7 +1586,7 @@
     </div>
 </section>
  <section id="vo-3-1" class="section" data-section="0">
-    <div class="section-bg image-bg lazyload fixed" data-bg="images/vo-sm.jpeg"></div>
+    <div class="section-bg image-bg lazyload fixed" data-background-image="images/vo-sm.jpeg"></div>
     <div class="section-bg blue-overlay fixed"></div>
     <div class="cross">
         <div class="content-section">
@@ -1592,7 +1598,7 @@
     </div>
 </section>
 
-<section id="vo-3-2" class="section video-scroll" data-section="0">
+<section id="vo-3-2" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lazyload" width="1664" height="770" data-src="https://www.youtube.com/embed/hivMU42gOI4?playlist=hivMU42gOI4&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lazyload" src="video/VL03_VILLAGE_SIDOMULYO_V2.mp4" muted loop playsinline></video>
@@ -1681,7 +1687,7 @@
     </div>
 </section>
 
-<section id="st-6-4" class="section video-scroll" data-section="0">
+<section id="st-6-4" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/NkKdjnlh32s?playlist=NkKdjnlh32s&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S06_PV_ACTIVITY_AZIZAH_V2.mp4" muted loop playsinline></video>
@@ -2051,7 +2057,7 @@
     </div>
 </section>
  <section id="vo-4-1" class="section" data-section="0">
-    <div class="section-bg image-bg lazyload fixed" data-bg="images/vo-cr.jpeg"></div>
+    <div class="section-bg image-bg lazyload fixed" data-background-image="images/vo-cr.jpeg"></div>
     <div class="section-bg blue-overlay fixed"></div>
     <div class="cross">
         <div class="content-section">
@@ -2063,7 +2069,7 @@
     </div>
 </section>
 
-<section id="vo-4-2" class="section video-scroll" data-section="0">
+<section id="vo-4-2" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video image-bg section-bg fixed">
         <!-- <iframe class="lazyload" width="1664" height="770" data-src="https://www.youtube.com/embed/9Ofe-DfdMnc?playlist=9Ofe-DfdMnc&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lazyload" src="video/VL04_VILLAGE_CANDIRENGGO_V2.mp4" muted loop playsinline></video>
@@ -2206,7 +2212,7 @@
     </div>
 </section>
 
-<section id="st-8-9" class="section video-scroll" data-section="0">
+<section id="st-8-9" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/yCnY0VAtEJY?playlist=yCnY0VAtEJY&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S08_PV_ACTIVITY_SENDY_V2.mp4" muted loop playsinline></video>
@@ -2262,7 +2268,7 @@
     </div>
 </section>
 
-<section id="st-8-11" class="section video-scroll" data-section="0">
+<section id="st-8-11" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/mfTOwSFwqB8?playlist=mfTOwSFwqB8&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S08_PV_COMMENTS_SENDY_V2.mp4" controls playsinline></video>
@@ -2357,7 +2363,7 @@
     </div>
 </section>
 
-<section id="st-9-5" class="section video-scroll" data-section="0">
+<section id="st-9-5" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe width="1664" height="770" src="https://www.youtube.com/embed/-CnsQwhu7sM?playlist=-CnsQwhu7sM&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S09_PV_ACTIVITY_HALIMAH_V2.mp4" muted loop playsinline></video>
@@ -2474,7 +2480,7 @@
     </div>
 </section>
 
-<section id="st-9-11" class="section video-scroll" data-section="0">
+<section id="st-9-11" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/tm_G0vST4Vc?playlist=tm_G0vST4Vc&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S09_PV_COMMENTS_HALIMAH_V4.mp4" controls playsinline></video>
@@ -2563,7 +2569,7 @@
     </div>
 </section>
 
-<section id="st-10-5" class="section video-scroll" data-section="0">
+<section id="st-10-5" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe class="lozad" width="1664" height="770" data-src="https://www.youtube.com/embed/EytmIJNOTqQ?playlist=EytmIJNOTqQ&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S10_PV_COMMENTS_ANDROMEDA_V2_2.mp4" controls playsinline></video>
@@ -2574,7 +2580,7 @@
     <div class="section-bg image-bg lozad fixed" data-background-image="images/st-10/st10-6.jpeg"></div>
 </section>
 
-<section id="st-10-7" class="section video-scroll" data-section="0">
+<section id="st-10-7" class="section video-scroll fp-auto-height" data-section="0">
     <div class="bg-video section-bg fixed">
         <!-- <iframe width="1664" height="770" src="https://www.youtube.com/embed/nm7AUocf4Ic?playlist=nm7AUocf4Ic&loop=1&autoplay=1&playsinline=1&controls=0&disablekb=0&modestbranding=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <video class="lozad" data-src="video/S10_PV_ACTIVITY_ANDROMEDA_V2.mp4" muted loop playsinline></video>
@@ -2732,9 +2738,10 @@
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js" integrity="sha512-hQ7LIAYhD17CZh6bDzdQI7NThUHmZGcAbGDfCWHO/sOEPRAdlkQFg4gTsKhWWbI1PMUvjD7JjA+5x3pH23Bnyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <!-- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/video-embed/ls.video-embed.min.js" integrity="sha512-acMQRDf0YzTUdu1+UFHIIxJrG6OalrhkZ3Lt6hWnCKgSQM6CkMcOYSiviEZZZbkHnL9//UhmSgwzI5seAsaKNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js" integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js" integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js" integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
