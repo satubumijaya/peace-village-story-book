@@ -735,11 +735,27 @@ img.greyscale {
     object-fit: contain;
 }
 
-#intr-4 h3 {
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Montserrat', sans-serif;
+#intr-4 {
+    h3 {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    @include media-breakpoint-down(md){
+        .content-section{
+            align-items: flex-start;
+        }
+        h3{
+            font-size: 28px;
+            .image-left{
+                margin-right: 10px;
+                img{
+                    max-height: 28px;
+                }
+            }
+        }
+    }
 }
 
 .video-foreground,

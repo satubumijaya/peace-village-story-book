@@ -368,11 +368,6 @@ d-flex {
 .navbar-right .nav-item ul #chapter .submenu li {
   border-bottom: 1px solid #355770;
 }
-.navbar-right .nav-item ul .fullscreen-toggle {
-  border-bottom: 0;
-  border-top: 1px solid #507680;
-  margin-top: auto;
-}
 .navbar-right .nav-item ul .share {
   border-bottom: 0;
   border-top: 1px solid #507680;
@@ -380,6 +375,31 @@ d-flex {
 .navbar-right .nav-item .brand {
   text-align: center;
   padding-top: 10px;
+}
+.navbar-right .nav-item .fullscreen-toggle {
+  border-bottom: 0;
+  border-top: 1px solid #507680;
+  margin-top: auto;
+  border-bottom: 1px solid #507680;
+}
+.navbar-right .nav-item .fullscreen-toggle a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #84b4c7;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 10px 9px 10px;
+}
+.navbar-right .nav-item .fullscreen-toggle a p {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 13px;
+  line-height: 15px;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
 .navbar-right .nav-item ul.submenu {
   padding-top: 0;
@@ -420,6 +440,38 @@ d-flex {
 }
 .navbar-right.expanded .icon-container {
   transform: rotate(180deg);
+}
+@media (max-width: 767.98px) {
+  .navbar-right {
+    width: 130px;
+    right: -130px;
+  }
+  .navbar-right .nav-item ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .navbar-right .nav-item ul .list-menu {
+    width: 100%;
+  }
+  .navbar-right .nav-item ul .list-menu a {
+    padding: 10px 5px 9px 5px;
+  }
+  .navbar-right .nav-item ul .list-menu.mobile-50 {
+    width: 50%;
+  }
+  .navbar-right .nav-item ul .list-menu.mobile-50 + .mobile-50 {
+    width: calc(50% - 1px);
+    border-left: 1px solid #507680;
+  }
+  .navbar-right .nav-item ul .submenu li {
+    width: 50%;
+  }
+  .navbar-right .nav-item ul .submenu li:nth-child(n+1) {
+    width: calc(50% - 1px);
+    border-left: 1px solid #355770;
+  }
 }
 
 .toc-list .sublist {
@@ -687,10 +739,10 @@ ul.toc-list > li {
     width: 100%;
   }
   .content-section .title-story h3.title {
-    font-size: 40px;
+    font-size: 32px;
   }
   .content-section .title-story h6.subtitle {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -1440,6 +1492,20 @@ img.greyscale {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 767.98px) {
+  #intr-4 .content-section {
+    align-items: flex-start;
+  }
+  #intr-4 h3 {
+    font-size: 28px;
+  }
+  #intr-4 h3 .image-left {
+    margin-right: 10px;
+  }
+  #intr-4 h3 .image-left img {
+    max-height: 28px;
+  }
 }
 
 .video-foreground,
