@@ -132,23 +132,104 @@ ul.toc-list {
             padding: 10px 0;
             font-family: 'Montserrat', sans-serif;
         }
-    }
-}
-.toc-left {
-    width: 40%;
-}
-.toc-right {
-    width: 60%;
-    .toc-list-wrapper {
-        width: 100%;
-        align-items: baseline;
-        .toc-list {
-            width: 50%;
+        .toc-left {
+            width: 40%;
+        }
+        .toc-right {
+            width: 60%;
+            .toc-list-wrapper {
+                width: 100%;
+                align-items: baseline;
+                .toc-list {
+                    width: 50%;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            .toc-left{
+                width: 100%;
+                .toc-title{
+                    font-size: 18px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+
+                    .heavy-text{
+                        font-size: 18px;
+                    }
+                }
+                .image-left{
+                    margin-top: 0;
+                    img{
+                        height: 18px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            p{
+                padding:5px 0;
+                font-size: 14px;
+            }
+            .toc-right {
+                width: 100%;
+                .heading-toc{
+                    font-size: 14px;
+                    display: none
+                }
+                .toc-list-wrapper {
+                    flex-direction: column;
+                    .toc-list {
+                        width: 100%;
+                        justify-content: center;
+                        li{
+                            padding-bottom: 10px;
+                        }
+                        .village-toc{
+                            font-size: 14px;
+                            div{
+                                justify-content: center;
+                            }
+                        }
+                        .sublist{
+                            display: flex;
+                            padding-left: 0;
+                            justify-content: center;
+                            .story-link{
+                                display: flex;
+                                flex-direction: column-reverse;
+                                padding: 5px 10px;
+                                // flex-grow: 1;
+                                .name{
+                                    padding-top: 5px;
+                                    letter-spacing: 0;
+                                    font-size: 14px;
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                                .avatar-container{
+                                    margin: auto;
+                                    .line{
+                                        display: none;
+                                    }
+                                    .avatar{
+                                        img{
+                                            filter: grayscale(0%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-}
-.heading-toc {
-    a {
-        border-bottom: 0!important;
+
+    .heading-toc {
+        a {
+            border-bottom: 0 !important;
+        }
     }
 }
