@@ -54,7 +54,7 @@ $(window).on('load', function () {
             .addTo(ctrl);
     });
     $('.section').each(function (index, element) {
-        $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
+        // $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
         var sectionBg = $(this).find('.section-bg.fixed');
         var sectionOverlay = $(this).find('.bg-overlay.fixed');
         var logoLeft = $(this).find('.intro-logo-bottom-left');
@@ -140,12 +140,12 @@ $(window).on('load', function () {
             duration: activeDuration,
             triggerHook: 0.95,
         })
-            .addIndicators({
-                name: `Timeline ${$(this).attr('id')}`,
-                colorTrigger: 'gray',
-                colorStart: 'gray',
-                colorEnd: 'gray',
-            })
+            // .addIndicators({
+            //     name: `Timeline ${$(this).attr('id')}`,
+            //     colorTrigger: 'gray',
+            //     colorStart: 'gray',
+            //     colorEnd: 'gray',
+            // })
             .on('enter', function () {
                 $(element).addClass('active');
                 $(element)
