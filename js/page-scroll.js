@@ -1,10 +1,15 @@
 // observer.observe();
+// const observer = lozad('.lozad', {
+//     loaded: function (el) {
+//         el.classList.add('loaded');
+//     },
+// });
 $(window).on('load', function () {
-    const observer = lozad('.lozad', {
-        loaded: function (el) {
-            el.classList.add('loaded');
-        },
-    });
+    // const observer = lozad('.lozad', {
+    //     loaded: function (el) {
+    //         el.classList.add('loaded');
+    //     },
+    // });
 
     var ctrl = new ScrollMagic.Controller({
         globalSceneOptions: {},
@@ -37,24 +42,25 @@ $(window).on('load', function () {
         })
 
         .addTo(ctrl);
-    $('.image-scroll-group').each(function (index, element) {
-        sectionCount = $(this).find('.section').length;
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            duration: sectionCount * $(window).height(),
-            // offset: window.innerHeight * -1,
-            triggerHook: 0.5,
-        })
-            .on('enter', function () {
-                $(element).addClass('active');
-            })
-            .on('leave', function () {
-                $(element).removeClass('active');
-            })
-            .addTo(ctrl);
-    });
+    // $('.image-scroll-group').each(function (index, element) {
+    //     sectionCount = $(this).find('.section').length;
+    //     new ScrollMagic.Scene({
+    //         triggerElement: this,
+    //         duration: sectionCount * $(window).height(),
+    //         // offset: window.innerHeight * -1,
+    //         triggerHook: 0.5,
+    //     })
+    //         .on('enter', function () {
+    //             $(element).addClass('active');
+    //         })
+    //         .on('leave', function () {
+    //             $(element).removeClass('active');
+    //         })
+    //         .addTo(ctrl);
+    // });
     $('.section').each(function (index, element) {
-        // $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
+        $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
+        return false;
         var sectionBg = $(this).find('.section-bg.fixed');
         var sectionOverlay = $(this).find('.bg-overlay.fixed');
         var logoLeft = $(this).find('.intro-logo-bottom-left');
@@ -191,64 +197,56 @@ $(window).on('load', function () {
             // .setTween(tl)
             .addTo(ctrl);
 
-        /* fullpage scrolling scene */
-        new ScrollMagic.Scene({
-            triggerHook: 'onLeave',
-            triggerElement: this,
-            offset: -1,
-        })
-            .addTo(ctrl) // scene end
-            .on('leave', function (event) {
-                if (event.scrollDirection === 'REVERSE') {
-                    TweenLite.to(window, 1.3, {
-                        scrollTo: {
-                            y: $(window).height() * (index - 1),
-                            autoKill: false,
-                        },
-                        ease: Power4.easeOut,
-                    });
-                }
-            });
-
-        /* fullpage scrolling scene */
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 'onEnter',
-            offset: 1,
-        })
-            .addTo(ctrl)
-            .on('enter', function (event) {
-                if (event.scrollDirection === 'FORWARD') {
-                    TweenLite.to(window, 1.3, {
-                        scrollTo: {
-                            y: $(element).offset().top,
-                            autoKill: false,
-                        },
-                        ease: Power4.easeOut,
-                    })
-                } // scene end
-            });
-    }); //hero each
-
-    var resizeTimer;
-    let currentHash = '';
-    $(window).resize(function () {
-        if (resizeTimer) {
-            clearTimeout(resizeTimer); // clear any previous pending timer
-        } else {
-            // must be first resize event in a series
-            currentHash = window.location.hash;
-            console.log('current hash', currentHash);
-            $('body').addClass('resize');
-        }
-        // set new timer
-        resizeTimer = setTimeout(function () {
-            window.location.hash = currentHash;
-            $('body').removeClass('resize');
-            currentHash = '';
-            resizeTimer = null;
-            // put your resize logic here and it will only be called when
-            // there's been a pause in resize events
-        }, 1000);
-    });
+    })
 }); //window onload
+
+
+new fullpage('#fullpage', {
+    //options here
+    autoScrolling: true,
+    // scrollHorizontally: true
+    scrollBar: true,
+    // autoScrolling:false,
+    // fadingEffect:'slides'
+    fadingEffect: true,
+    continuousHorizontal: false,
+    scrollOverflow: true,
+    scrollingSpeed: 700,
+    lazyLoading: true,
+
+    onLeave: function (origin, destination, direction) {
+        console.log(destination.item.id);
+        const id = destination.item.id;
+        // $(id).addClass('active');
+        // $(id)
+        //     .find('.lozad')
+        //     .each(function (el, i) {
+        //         console.log(el);
+        //         observer.triggerLoad($(this).get(0));
+        //     });
+        // const id = $(id).attr('id');
+        // window.location.hash = id;
+        let video = $(`#${id}`).find('video').get(0);
+        if (video) {
+            console.log('video play');
+            video.play();
+        }
+
+        $(`#${id}`)
+            .find('div[data-bg]')
+            .each(function(i, el){
+            console.log(el);
+            $(el).css('background-image', `url(${$(el).attr('data-bg')})`)
+        })
+        $(`#${id}`)
+            .closest('.section')
+            .find('div[data-bg]')
+            .each(function (i, el) {
+                console.log(el);
+                $(el).css('background-image', `url(${$(el).attr('data-bg')})`);
+            });
+
+        history.replaceState(null, null, `#${id}`);
+    },
+    afterLoad: function (origin, destination, direction) {},
+});

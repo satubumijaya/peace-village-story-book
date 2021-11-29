@@ -346,6 +346,7 @@ ul.toc-list > li {
   padding: 0;
   position: fixed;
   opacity: 0;
+  visibility: hidden;
   transition: 1s opacity ease-in-out;
 }
 .section.book-layout .content-section .text-container {
@@ -385,6 +386,10 @@ ul.toc-list > li {
 .section.book-layout.reversed .section-bg.book-image {
   left: 0;
   right: auto;
+}
+.section.book-layout.active .content-section {
+  opacity: 1;
+  visibility: visible;
 }
 
 .section.active + .section.section.book-layout.active .content-section {
@@ -466,6 +471,7 @@ section .section-bg {
   height: 100%;
   background-position: center;
   background-size: cover;
+  transition: all 1s ease-in-out;
 }
 section .section-bg.image-bg {
   background-color: #0b2844;
@@ -476,8 +482,22 @@ section .section-bg.greyscale {
 }
 section .section-bg.fixed {
   position: fixed;
+  visibility: hidden;
+  opacity: 0;
   top: 0;
   left: 0;
+}
+section .bg-overlay {
+  transition: all 1s ease-in-out;
+}
+section .bg-overlay.fixed {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 section .content-section {
   z-index: 2;
@@ -498,17 +518,16 @@ section .content-section p a:hover {
   color: #84b4c7;
   border-color: #84b4c7;
 }
-section .bg-overlay.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+section.active .content-section {
+  opacity: 1;
+  visibility: visible;
 }
 section.active .section-bg {
+  opacity: 1;
   visibility: visible;
 }
 section.active .bg-overlay {
+  opacity: 1;
   visibility: visible;
 }
 section .bg-video video {
@@ -895,7 +914,7 @@ h4 {
 
 .blue-overlay {
   background-color: #0b2844;
-  opacity: 0.6;
+  opacity: 0.6 !important;
 }
 .blue-overlay.fixed {
   left: 0;

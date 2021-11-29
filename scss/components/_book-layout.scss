@@ -8,7 +8,9 @@
         padding: 0;
         position: fixed;
         opacity: 0;
+        visibility: hidden;
         transition: 1s opacity ease-in-out;
+
         .text-container{
             width: 30%;
             max-width: 40%;
@@ -53,11 +55,12 @@
         }
     }
 
-    // &.active{
-    //     .content-section{
-    //         opacity: 1;
-    //     }
-    // }
+    &.active{
+        .content-section{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 }
 .section.active + .section.section.book-layout.active{
     .content-section{

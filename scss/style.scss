@@ -63,25 +63,45 @@ section {
         height: 100%;
         background-position: center;
         background-size: cover;
+        transition: $transition-bg;
+
         &.image-bg{
             background-color: $color-blue-dark;
         }
-        // visibility: hidden;
+        
         // opacity: 0;
         // z-index: -2;
-        // transition: all 0.2s ease-in-out;
-        // transition-delay: 0.1s;
-        // transition-property: visibility;
+        
         &.greyscale {
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
         }
         &.fixed {
             position: fixed;
+            visibility: hidden;
+            opacity: 0;
+            // position: absolute;
             top: 0;
             left: 0;
         }
     }
+    .bg-overlay {
+        // visibility: hidden;
+        // z-index: -1;
+        // opacity: 0;
+        transition: $transition-bg;
+        &.fixed {
+            position: fixed;
+            visibility: hidden;
+            opacity: 0;
+            // position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     .content-section {
         z-index: 2;
         &.fixed {
@@ -101,25 +121,18 @@ section {
             }
         }
     }
-    .bg-overlay {
-        // visibility: hidden;
-        // z-index: -1;
-        // opacity: 0;
-        &.fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
+    
     &.active {
+        .content-section{
+            opacity: 1;
+            visibility: visible;
+        }
         .section-bg {
-            // opacity: 1;
+            opacity: 1;
             visibility: visible;
         }
         .bg-overlay {
-            // opacity: 1;
+            opacity: 1;
             visibility: visible;
         }
     }
@@ -527,7 +540,7 @@ h4 {
 .blue-overlay {
     // background: #0e2e4a9e;
     background-color:#0b2844;
-    opacity: 0.6;
+    opacity: 0.6!important;
     &.fixed{
         // position: fixed;
         left: 0;
