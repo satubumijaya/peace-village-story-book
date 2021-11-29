@@ -138,7 +138,7 @@ d-flex {
 }
 @media (max-width: 767.98px) {
   .half-left-overlay {
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 62%);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 75%);
   }
   .half-left-overlay.mobile {
     display: block !important;
@@ -161,7 +161,7 @@ d-flex {
 }
 @media (max-width: 767.98px) {
   .half-right-overlay {
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 62%);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 75%);
   }
   .half-right-overlay.mobile {
     display: block !important;
@@ -179,6 +179,11 @@ d-flex {
   box-sizing: border-box;
   background: black;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 62%);
+}
+@media (max-width: 767.98px) {
+  .half-bottom-overlay {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 75%);
+  }
 }
 
 .bg-blue-overlay {
@@ -220,7 +225,7 @@ d-flex {
 }
 @media (max-width: 767.98px) {
   .content-section {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 }
 
@@ -861,6 +866,11 @@ body {
   line-height: 1.3;
 }
 
+p {
+  margin-block-end: 15px;
+  margin-block-start: 15px;
+}
+
 :root {
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
@@ -885,6 +895,10 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+#fullpage {
+  background-color: #0b2844;
 }
 
 section {
@@ -1105,7 +1119,7 @@ section .debug-id {
   #intr-1 .left h5 {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 24px;
   }
   #intr-1 .left h5 .image-left {
     margin-right: 10px;

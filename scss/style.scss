@@ -33,6 +33,11 @@ body {
     line-height: 1.3;
 }
 
+p{
+    margin-block-end: 15px;
+    margin-block-start: 15px;
+}
+
 :root {
     --animate-duration: 800ms;
     --animate-delay: 0.9s;
@@ -60,6 +65,9 @@ li {
     list-style-type: none;
 }
 
+#fullpage{
+    background-color: $color-blue-dark;
+}
 section {
     height: 100vh;
     position: relative;
@@ -310,7 +318,7 @@ section {
             h5 {
                 margin-top: 0;
                 margin-bottom: 10px;
-                font-size: 16px;
+                font-size: 24px;
                 .image-left {
                     margin-right: 10px;
                     img {

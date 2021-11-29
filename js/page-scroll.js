@@ -1,16 +1,4 @@
-// observer.observe();
-// const observer = lozad('.lozad', {
-//     loaded: function (el) {
-//         el.classList.add('loaded');
-//     },
-// });
 $(window).on('load', function () {
-    // const observer = lozad('.lozad', {
-    //     loaded: function (el) {
-    //         el.classList.add('loaded');
-    //     },
-    // });
-
     var ctrl = new ScrollMagic.Controller({
         globalSceneOptions: {},
     });
@@ -42,165 +30,31 @@ $(window).on('load', function () {
         })
         .addTo(ctrl);
 
-    // $('.image-scroll-group').each(function (index, element) {
-    //     sectionCount = $(this).find('.section').length;
-    //     new ScrollMagic.Scene({
-    //         triggerElement: this,
-    //         duration: sectionCount * $(window).height(),
-    //         // offset: window.innerHeight * -1,
-    //         triggerHook: 0.5,
-    //     })
-    //         .on('enter', function () {
-    //             $(element).addClass('active');
-    //         })
-    //         .on('leave', function () {
-    //             $(element).removeClass('active');
-    //         })
-    //         .addTo(ctrl);
-    // });
     $('.section').each(function (index, element) {
         $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
     })
-    $('.section').each(function (index, element) {
-        // $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
-        return false;
-        var sectionBg = $(this).find('.section-bg.fixed');
-        var sectionOverlay = $(this).find('.bg-overlay.fixed');
-        var logoLeft = $(this).find('.intro-logo-bottom-left');
-        var logoRight = $(this).find('.intro-logo-bottom-right');
 
-        var tl = new TimelineMax()
-            .add(
-                TweenMax.from(sectionBg, 0.5, {
-                    opacity: 0,
-                    // visibility: 'hidden',
-                })
-            )
-            .add(
-                TweenMax.from(sectionOverlay, 0.5, {
-                    opacity: 0,
-                    // visibility: 'hidden',
-                }),
-                0
-            )
-            .add(
-                TweenMax.from(logoLeft, 0.5, {
-                    opacity: 0,
-                    // visibility: 'hidden',
-                }),
-                0
-            )
-            .add(
-                TweenMax.to(logoRight, 0.5, {
-                    opacity: 1,
-                    // visibility: 'hidden',
-                }),
-                0
-            );
+    // var height = window.innerHeight;
+    // var a = setInterval(function () {
+    //     // $(window).scrollTop(-1);
+    //     resize();
+    // }, 500); // Don't lower more than 500ms, otherwise there will be animation-problems with the  Safari toolbar
 
-        if ($(this).hasClass('book-layout')) {
-            var bookImage = $(this).find('.image-container .image');
-            tl.add(
-                TweenMax.from(bookImage, 0.5, {
-                    opacity: 0,
-                }),
-                0
-            );
-        }
+    // $(window).on('resize', function () {
+    //     resize();
+    // });
 
-        if ($(this).attr('id') === 'close-1') {
-            var blueOverlay = $(this).find('.blue-overlay');
-            tl.add(
-                TweenMax.fromTo(
-                    blueOverlay,
-                    1,
-                    {
-                        opacity: 1,
-                    },
-                    {
-                        opacity: 0.6,
-                        delay: 1,
-                    }
-                ),
-                0
-            );
-        }
+    // var resize = function () {
+    //     if (window.innerHeight != height) {
+    //         console.log('resized')
+    //         height = window.innerHeight;
+    //         $('.fp-tableCell').css('height', height + 'px');
+    //     }
+    // };
 
-        /* section scrolling scene */
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            offset: -1,
-        })
-            .setTween(tl)
-            .addTo(ctrl);
-
-        /* active inactive section */
-        let activeDuration = '200%';
-        if ($(this).attr('id') === 'close-2') {
-            activeDuration = '100%';
-        }
-        if ($(this).hasClass('image-scroll-layout')) {
-            const imageCount = $(this).find('.image-scroll div').length;
-            activeDuration = `${imageCount + 3}00%`;
-        }
-
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            duration: activeDuration,
-            triggerHook: 0.95,
-        })
-            // .addIndicators({
-            //     name: `Timeline ${$(this).attr('id')}`,
-            //     colorTrigger: 'gray',
-            //     colorStart: 'gray',
-            //     colorEnd: 'gray',
-            // })
-            .on('enter', function () {
-                $(element).addClass('active');
-                $(element)
-                    .find('.lozad')
-                    .each(function (el, i) {
-                        observer.triggerLoad($(this).get(0));
-                    });
-            })
-            .on('leave', function () {
-                $(element).removeClass('active');
-            })
-            .addTo(ctrl);
-
-        /* play and pause video scene */
-        new ScrollMagic.Scene({
-            triggerElement: this,
-            duration: '100%',
-            offset: 10,
-        })
-            .on('enter', function () {
-                video = $(element).find('video').get(0);
-                if (video) {
-                    video.play();
-                }
-                const id = $(element).attr('id');
-                // window.location.hash = id;
-                history.replaceState(null, null, `#${id}`);
-
-                const idArr = id.split('-');
-                $('#chapter .submenu a').removeClass('active');
-                if (idArr[0] === 'st') {
-                    $(`#nav-st-${idArr[1]}`).addClass('active');
-                }
-            })
-            .on('leave', function () {
-                video = $(element).find('video').get(0);
-                if (video) {
-                    console.log('pausing video');
-                    video.pause();
-                    video.currentTime = 0;
-                }
-            })
-            // .setTween(tl)
-            .addTo(ctrl);
-
-    })
+    if(window.innerWidth < 768){
+        $('.story-opening .section-bg').addClass('fixed');
+    }
 }); //window onload
 
 new fullpage('#fullpage', {
