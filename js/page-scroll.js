@@ -54,6 +54,7 @@ $(window).on('load', function () {
 
     if(window.innerWidth < 768){
         $('.story-opening .section-bg').addClass('fixed');
+        $('#intr-3 .section-bg').addClass('fixed');
     }
 }); //window onload
 

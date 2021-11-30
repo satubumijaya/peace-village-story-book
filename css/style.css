@@ -1455,8 +1455,18 @@ img.greyscale {
   padding-bottom: 56.5%;
   height: 100%;
 } */
+#intr-3 .section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#intr-3 .section-bg.fixed {
+  position: fixed;
+}
+
 #intr-3 .content-section {
-  background: url("../images/toc.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
