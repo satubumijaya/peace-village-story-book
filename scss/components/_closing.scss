@@ -1,13 +1,21 @@
 #close-1{
-    visibility: visible;
-    .blue-overlay {
-    // background: #0e2e4a9e;
-        background-color:#0b2844;
-        opacity: 0.6;
-        left: 0;
-        top:0;
-        width: 100%;
-        height: 100%;
+    // visibility: visible;
+    // .blue-overlay {
+    // // background: #0e2e4a9e;
+    //     background-color:#0b2844;
+    //     opacity: 0.6;
+    //     left: 0;
+    //     top:0;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    // }
+    // @include media-breakpoint-down(md){
+    //     visibility: hidden;
+    // }
+    .section-bg{
         position: absolute;
+        top: 0;
+        left: 0;
     }
 }
