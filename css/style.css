@@ -1506,16 +1506,6 @@ img.greyscale {
   background-size: 100% 100%;
 }
 
-#intr-3 .content-section:after {
-  content: "";
-  background: #192c46db;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
-
 #intr-3 .content-section .content-table {
   z-index: 9;
 }
