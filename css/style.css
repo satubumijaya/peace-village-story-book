@@ -850,6 +850,11 @@ ul.toc-list > li {
   top: 0;
   left: 0;
 }
+@media (max-width: 767.98px) {
+  #close-1 .section-bg {
+    position: fixed;
+  }
+}
 
 html {
   /* scroll-snap-type: mandatory; */
