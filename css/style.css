@@ -991,6 +991,18 @@ section .bg-video video {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 767.98px) {
+  section .bg-video.video-controls {
+    display: flex;
+    align-items: center;
+    background-color: #0b2844;
+  }
+  section .bg-video.video-controls video {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+  }
+}
 section .debug-id {
   position: absolute;
   z-index: 9999;
@@ -1073,7 +1085,7 @@ section .debug-id {
   position: fixed;
   left: 0;
   top: 0;
-  color: #FFF;
+  color: #fff;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: right;
@@ -1423,13 +1435,30 @@ img.greyscale {
   height: 100vh;
 }
 
-.bg-video iframe {
+.bg-video.video-iframe {
+  background-color: #0b2844;
+}
+.bg-video .iframe-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100vw;
   height: 100vh;
   transform: translate(-50%, -50%);
+}
+.bg-video .iframe-wrapper iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 767.98px) {
+  .bg-video .iframe-wrapper {
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+  }
 }
 
 .video-scroll .content-section {
