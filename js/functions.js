@@ -43,6 +43,9 @@ $(function () {
     fullscreen();
   })
 })
+$('.submenu a').click(function(e){
+  $('.navbar-right .navbar-toggle').trigger('click');
+});
 
 // const observerOptions = {
 //   root: null,
