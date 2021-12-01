@@ -299,13 +299,13 @@ d-flex {
   right: 0;
   background-color: rgba(53, 87, 112, 0.9);
   width: 67px;
-  right: -67px;
-  transition: all 0.2s ease-in-out;
 }
 .navbar-right .nav-item {
   height: 100%;
   display: flex;
   flex-direction: column;
+  right: -67px;
+  transition: all 0.2s ease-in-out;
 }
 .navbar-right .nav-item ul {
   padding-top: 10px;
@@ -424,6 +424,11 @@ d-flex {
   padding-top: auto;
   opacity: 1;
 }
+.navbar-right .nav-item.open .fullscreen-toggle p {
+  height: 0;
+  padding-top: 0;
+  opacity: 0;
+}
 .navbar-right .navbar-toggle {
   cursor: pointer;
   width: 30px;
@@ -476,6 +481,9 @@ d-flex {
   .navbar-right .nav-item ul .submenu li:nth-child(n+1) {
     width: calc(50% - 1px);
     border-left: 1px solid #355770;
+  }
+  .navbar-right .fullscreen-toggle {
+    display: none;
   }
 }
 
@@ -997,19 +1005,6 @@ section .debug-id {
   overflow-y: scroll;
   height: 100vh;
 } */
-.intro-gate-left {
-  position: fixed;
-  left: 0;
-  top: 0;
-  color: #fff;
-}
-
-.intro-gate-right {
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-
 .intro-logo-bottom-left {
   position: fixed;
   left: 5%;
@@ -1076,9 +1071,13 @@ section .debug-id {
 
 #intr-1 .left {
   /* background-image: url(../images/wel-1.png); */
-  background-size: 100% 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #FFF;
+  background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: right;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -1094,10 +1093,13 @@ section .debug-id {
 }
 #intr-1 .right {
   /* background-image: url(../images/wel-2.png); */
-  background-size: contain;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position: right;
-  width: 38%;
+  background-position: left;
+  width: 34%;
   display: flex;
   flex-direction: column;
   padding-right: 7rem;

@@ -100,6 +100,7 @@ section {
             left: 0;
         }
     }
+
     .bg-overlay {
         // visibility: hidden;
         // z-index: -1;
@@ -191,17 +192,17 @@ section {
 //     object-fit: cover;
 // }
 
-.intro-gate-left {
-    position: fixed;
-    left: 0;
-    top: 0;
-    color: #fff;
-}
-.intro-gate-right {
-    position: fixed;
-    right: 0;
-    top: 0;
-}
+// .intro-gate-left {
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     color: #fff;
+// }
+// .intro-gate-right {
+//     position: fixed;
+//     right: 0;
+//     top: 0;
+// }
 
 .intro-logo-bottom-left {
     position: fixed;
@@ -276,9 +277,14 @@ section {
 #intr-1 {
     .left {
         /* background-image: url(../images/wel-1.png); */
-        background-size: 100% 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        color: #FFF;
+        // background-size: 100% 100%;
+        background-size: auto 100%;
         background-repeat: no-repeat;
-        background-position: left;
+        background-position: right;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -294,10 +300,13 @@ section {
     }
     .right {
         /* background-image: url(../images/wel-2.png); */
-        background-size: contain;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-size: auto 100%;
         background-repeat: no-repeat;
-        background-position: right;
-        width: 38%;
+        background-position: left;
+        width: 34%;
         display: flex;
         flex-direction: column;
         padding-right: 7rem;
