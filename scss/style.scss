@@ -679,6 +679,11 @@ img.greyscale {
 }
 
 .video-scroll {
+    .fp-tableCell{
+        overflow: scroll;
+        display: block;
+        overscroll-behavior: contain;
+    }
     .content-section {
         position: relative !important;
         padding: 0 5%;

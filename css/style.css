@@ -918,7 +918,7 @@ section .section-bg {
   height: 100%;
   background-position: center;
   background-size: cover;
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 section .section-bg.image-bg {
   background-color: #0b2844;
@@ -935,7 +935,7 @@ section .section-bg.fixed {
   left: 0;
 }
 section .bg-overlay {
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 section .bg-overlay.fixed {
   position: fixed;
@@ -1021,7 +1021,7 @@ section .debug-id {
   left: 5%;
   bottom: 8%;
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 .intro-logo-bottom-left .logo img {
   max-height: 120px;
@@ -1044,7 +1044,7 @@ section .debug-id {
   right: 5%;
   bottom: 8%;
   opacity: 0;
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 .intro-logo-bottom-right .logo img {
   max-height: 90px;
@@ -1461,6 +1461,11 @@ img.greyscale {
   }
 }
 
+.video-scroll .fp-tableCell {
+  overflow: scroll;
+  display: block;
+  overscroll-behavior: contain;
+}
 .video-scroll .content-section {
   position: relative !important;
   padding: 0 5%;
