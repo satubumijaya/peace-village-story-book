@@ -380,13 +380,14 @@ d-flex {
   text-align: center;
   padding-top: 10px;
 }
-.navbar-right .nav-item .fullscreen-toggle {
+.navbar-right .nav-item .fullscreen-toggle,
+.navbar-right .nav-item .list-menu {
   border-bottom: 0;
   border-top: 1px solid #507680;
-  margin-top: auto;
   border-bottom: 1px solid #507680;
 }
-.navbar-right .nav-item .fullscreen-toggle a {
+.navbar-right .nav-item .fullscreen-toggle a,
+.navbar-right .nav-item .list-menu a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,13 +398,17 @@ d-flex {
   text-transform: capitalize;
   padding: 10px 10px 9px 10px;
 }
-.navbar-right .nav-item .fullscreen-toggle a p {
+.navbar-right .nav-item .fullscreen-toggle a p,
+.navbar-right .nav-item .list-menu a p {
   margin: 0;
   padding-top: 10px;
   font-size: 13px;
   line-height: 15px;
   overflow: hidden;
   transition: all 0.2s ease;
+}
+.navbar-right .nav-item .bottom-menu-item {
+  margin-top: auto;
 }
 .navbar-right .nav-item ul.submenu {
   padding-top: 0;
@@ -1097,8 +1102,14 @@ section .debug-id {
   justify-content: space-between;
   height: 100%;
 }
+#intr-1 .left h5 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
 #intr-1 .left h4 {
-  max-width: 57%;
+  max-width: 56%;
+  font-size: 28px;
 }
 #intr-1 .right {
   /* background-image: url(../images/wel-2.png); */
@@ -1124,7 +1135,7 @@ section .debug-id {
     background-image: url(../images/wel-mobile.png) !important;
     background-size: cover;
     background-position: top left;
-    padding: 20px;
+    padding: 40px 20px;
     width: 100%;
   }
   #intr-1 .left h5 {
@@ -1745,11 +1756,6 @@ section#closing-video .bg-video {
 
 /* Responsive */
 @media screen and (min-height: 768px) and (max-height: 800px) {
-  #intr-1 .left {
-    padding-top: 0rem;
-    padding-bottom: 3rem;
-  }
-
   #intr-1 .left h4 {
     max-width: 80%;
   }

@@ -97,10 +97,12 @@
             padding-top: 10px;
         }
 
-        .fullscreen-toggle {
+        .fullscreen-toggle,
+        .list-menu {
             border-bottom: 0;
             border-top: 1px solid #507680;
-            margin-top: auto;
+                        border-bottom: 1px solid #507680;
+
             a {
                 display: flex;
                 align-items: center;
@@ -120,7 +122,10 @@
                     transition: all 0.2s ease;
                 }
             }
-            border-bottom: 1px solid #507680;
+        }
+
+        .bottom-menu-item{
+            margin-top: auto;
         }
 
         ul.submenu {

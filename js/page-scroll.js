@@ -161,6 +161,9 @@ new fullpage('#fullpage', {
                 // console.log(el);
                 $(el).css('background-image', `url(${$(el).attr('data-background-image')})`);
             });
+
+        $('.section').removeClass('fp-completely');
+        $(`#${id}`).addClass('fp-completely');
     },
 });
 fullpage_api.setAutoScrolling(true);
