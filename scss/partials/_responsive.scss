@@ -56,3 +56,17 @@
         }
     }
 }
+
+.mobile-only{
+    display: none!important;
+    @include media-breakpoint-down(md){
+        display: block!important;
+    }
+}
+
+.desktop-only{
+    display: block!important;
+    @include media-breakpoint-down(md){
+        display: none!important;
+    }
+}

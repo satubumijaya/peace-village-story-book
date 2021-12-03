@@ -348,6 +348,24 @@ d-flex {
     background-position: 100% center !important;
   }
 }
+.mobile-only {
+  display: none !important;
+}
+@media (max-width: 767.98px) {
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+.desktop-only {
+  display: block !important;
+}
+@media (max-width: 767.98px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 .navbar-right {
   position: fixed;
   height: 100%;
@@ -1714,6 +1732,15 @@ img.greyscale {
 
 section#close-1 {
   position: relative;
+}
+section#close-1 .section-bg {
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767.98px) {
+  section#close-1 .section-bg {
+    background-position: top center;
+  }
 }
 
 .img-scroll {

@@ -935,6 +935,15 @@ img.greyscale {
 
 section#close-1 {
     position: relative;
+    .section-bg{
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    @include media-breakpoint-down(md){
+        .section-bg{
+            background-position: top center;
+        }
+    }
 }
 
 .img-scroll {
