@@ -1860,3 +1860,50 @@ section#closing-video .bg-video {
     height: 175px;
   }
 }
+#st-10-6 .section-bg .image-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+#st-10-6 .section-bg .image-grid div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#st-10-6 .section-bg .image-grid div:nth-child(1) {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  height: calc(50% - 10px);
+  width: calc(50vw - 5px);
+}
+#st-10-6 .section-bg .image-grid div:nth-child(2) {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  height: calc(50% - 10px);
+  width: calc(50vw - 5px);
+}
+#st-10-6 .section-bg .image-grid div:nth-child(3) {
+  height: 50%;
+  width: 100vw;
+}
+@media (max-width: 767.98px) {
+  #st-10-6 .section-bg .image-grid div:nth-child(1) {
+    width: 100vw;
+    margin: 0;
+    margin-bottom: 10px;
+    height: calc(33.33% - 10px);
+  }
+  #st-10-6 .section-bg .image-grid div:nth-child(2) {
+    width: 100vw;
+    margin: 0;
+    margin-bottom: 10px;
+    height: calc(33.33% - 10px);
+  }
+  #st-10-6 .section-bg .image-grid div:nth-child(3) {
+    width: 100vw;
+    margin: 0;
+    height: calc(33.33% - 10px);
+  }
+}
