@@ -935,6 +935,105 @@ ul.toc-list > li {
   }
 }
 
+#close-2 .content-section {
+  flex-wrap: wrap;
+}
+#close-2 .content-wrapper {
+  width: 100%;
+}
+#close-2 .top-logos {
+  display: flex;
+  width: 100%;
+  margin-bottom: 100px;
+}
+#close-2 .top-logos div {
+  width: 50%;
+  text-align: center;
+}
+#close-2 .top-logos div img {
+  max-height: 100px;
+  max-width: 100%;
+}
+#close-2 .top-logos div:first-child img {
+  max-height: 110px;
+}
+@media (max-width: 767.98px) {
+  #close-2 .top-logos {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  #close-2 .top-logos div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #close-2 .top-logos div img {
+    max-height: 75px;
+  }
+  #close-2 .top-logos div:first-child img {
+    max-height: 85px;
+  }
+}
+#close-2 .bottom-logos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  width: 100%;
+}
+#close-2 .bottom-logos div {
+  width: 33.33%;
+  text-align: center;
+}
+#close-2 .bottom-logos div img {
+  max-height: 80px;
+  max-width: 100%;
+}
+#close-2 .bottom-logos div:nth-child(1) img {
+  max-height: 80px;
+}
+#close-2 .bottom-logos div:nth-child(2) img {
+  max-height: 70px;
+}
+#close-2 .bottom-logos div:nth-child(3) img {
+  max-height: 60px;
+}
+@media (max-width: 767.98px) {
+  #close-2 .bottom-logos {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  #close-2 .bottom-logos div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #close-2 .bottom-logos div:nth-child(1) img {
+    max-height: 60px;
+  }
+  #close-2 .bottom-logos div:nth-child(2) img {
+    max-height: 55px;
+  }
+  #close-2 .bottom-logos div:nth-child(3) img {
+    max-height: 50px;
+  }
+}
+#close-2 .text {
+  width: 100%;
+  color: #444444;
+  text-align: center;
+  font-size: 20px;
+}
+#close-2 .text strong {
+  font-weight: 800;
+}
+#close-2 .text a {
+  color: #444444;
+  border-color: #444444;
+}
+@media (max-width: 767.98px) {
+  #close-2 .text {
+    font-size: 16px;
+  }
+}
+
 html {
   /* scroll-snap-type: mandatory; */
   /* scroll-snap-points-y: repeat(300px); */
