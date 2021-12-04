@@ -14,37 +14,45 @@
 // });
 
 function fullscreen() {
-  if ((document.fullScreenElement && document.fullScreenElement !== null) ||
-    (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-    if (document.documentElement.requestFullScreen) {
-      document.documentElement.requestFullScreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullScreen) {
-      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+    if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+        if (document.documentElement.requestFullScreen) {
+            document.documentElement.requestFullScreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullScreen) {
+            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
+    } else {
+        if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        }
     }
-  } else {
-    if (document.cancelFullScreen) {
-      document.cancelFullScreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitCancelFullScreen) {
-      document.webkitCancelFullScreen();
-    }
-  }
 }
 $(function () {
-  $('.navbar-right .navbar-toggle').click(function (e) {
-    e.preventDefault();
-    $('.navbar-right').toggleClass('expanded');
-  });
-  $('.fullscreen-toggle a').click(function(e) {
-    e.preventDefault();
-    fullscreen();
-  })
-})
-$('.submenu a').click(function(e){
-  $('.navbar-right .navbar-toggle').trigger('click');
+    $('.navbar-right .navbar-toggle').click(function (e) {
+        e.preventDefault();
+        $('.navbar-right').toggleClass('expanded');
+    });
+    $('.fullscreen-toggle a').click(function (e) {
+        e.preventDefault();
+        fullscreen();
+    });
+    $('.submenu a').click(function (e) {
+        $('.navbar-right .navbar-toggle').trigger('click');
+    });
+    fullpage_api.setAllowScrolling(false);
+    $('#welcome-continue-btn').click(function (e) {
+      e.preventDefault();
+      $('#welcome').css('opacity', 0);
+      setTimeout(function(){
+        $('#welcome').css('visibility', 'hidden');
+        fullpage_api.setAllowScrolling(true);
+      },700);
+    });
 });
 
 // const observerOptions = {
@@ -72,10 +80,10 @@ $('.submenu a').click(function(e){
 
 // Navigation Toggle
 $(document).ready(function () {
-  $("#nav-toggle > a").on('click', function (e) {
-    e.preventDefault();
-    $(".nav-item").toggleClass("open");
-  });
+    $('#nav-toggle > a').on('click', function (e) {
+        e.preventDefault();
+        $('.nav-item').toggleClass('open');
+    });
 });
 
 // next and previous button
@@ -86,38 +94,38 @@ var i = 0;
 var scrolto = 0;
 
 function next() {
-  var scrollPos = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  window.scrollTo({
-    top: scrollPos + windowHeight,
-    behavior: 'smooth',
-  });
+    var scrollPos = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    window.scrollTo({
+        top: scrollPos + windowHeight,
+        behavior: 'smooth',
+    });
 }
 
 function prev() {
-  var scrollPos = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  window.scrollTo({
-    top: scrollPos - windowHeight,
-    behavior: 'smooth',
-  });
+    var scrollPos = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    window.scrollTo({
+        top: scrollPos - windowHeight,
+        behavior: 'smooth',
+    });
 }
 
-$("html").keydown(function (e) {
-  if (e.which == "38") {
-    prev();
-  }
-  if (e.which == "40") {
+$('html').keydown(function (e) {
+    if (e.which == '38') {
+        prev();
+    }
+    if (e.which == '40') {
+        next();
+    }
+});
+
+$('.next').click(function (e) {
+    e.preventDefault();
     next();
-  }
 });
 
-$(".next").click(function (e) {
-  e.preventDefault();
-  next();
-});
-
-$(".prev").click(function (e) {
-  e.preventDefault();
-  prev();
+$('.prev').click(function (e) {
+    e.preventDefault();
+    prev();
 });

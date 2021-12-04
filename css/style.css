@@ -2006,3 +2006,55 @@ section#closing-video .bg-video {
     height: calc(33.33% - 10px);
   }
 }
+
+#welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3D566E;
+  background-image: url("images/overlay.png");
+  z-index: 9999;
+  transition: 0.7s opacity ease-in-out;
+}
+#welcome .content-section {
+  display: flex;
+  align-items: center;
+}
+#welcome .content-section .content-wrapper {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+  font-weight: 300;
+  font-size: 20px;
+}
+#welcome .content-section .content-wrapper div {
+  margin-bottom: 20px;
+}
+#welcome #welcome-continue-btn {
+  margin-top: 20px;
+  border: 2px solid #82A4B7;
+  border-radius: 4px;
+  color: #82A4B7;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+#welcome #welcome-continue-btn:hover {
+  background-color: #82A4B7;
+  color: #3D566E;
+}
+#welcome img {
+  margin-top: 20px;
+  max-height: 40px;
+}
+
+body.welcome-open {
+  position: static;
+  overflow: hidden;
+}
