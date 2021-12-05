@@ -167,7 +167,7 @@ new fullpage('#fullpage', {
             console.log('set false');
             fullpage_api.setAutoScrolling(false);
         }
-        
+
         $(`#${id}`)
             .find('div[data-background-image]')
             .each(function (i, el) {
@@ -196,6 +196,10 @@ new fullpage('#fullpage', {
         if (idArr[0] === 'st') {
             $(`#nav-st-${idArr[1]}`).addClass('active');
         }
+        if (idArr[0] !== 'intr') {
+            pauseAudio();
+        }
+
 
         $('.section').removeClass('fp-completely');
         $(`#${id}`).addClass('fp-completely');

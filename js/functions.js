@@ -45,15 +45,32 @@ $(function () {
         $('.navbar-right .navbar-toggle').trigger('click');
     });
     fullpage_api.setAllowScrolling(false);
+
     $('#welcome-continue-btn').click(function (e) {
-      e.preventDefault();
-      $('#welcome').css('opacity', 0);
-      setTimeout(function(){
-        $('#welcome').css('visibility', 'hidden');
-        fullpage_api.setAllowScrolling(true);
-      },700);
+        e.preventDefault();
+        $('#welcome').css('opacity', 0);
+
+        const currentId = fullpage_api.getActiveSection().item.id;
+        const idArr = currentId.split('-');
+
+        if(idArr[0] === 'intr'){
+            playAudio();
+        }
+
+        setTimeout(function(){
+            $('#welcome').css('visibility', 'hidden');
+            fullpage_api.setAllowScrolling(true);
+        },700);
     });
 });
+
+function playAudio(){
+    $('#backsound').get(0).play();
+}
+
+function pauseAudio() {
+    $('#backsound').get(0).pause();
+}
 
 // const observerOptions = {
 //   root: null,
