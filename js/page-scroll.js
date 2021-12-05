@@ -128,9 +128,17 @@ new fullpage('#fullpage', {
         //     });
         // const id = $(id).attr('id');
         // window.location.hash = id;
+        let $videoContainer = $(`#${id}`).find('video').closest('div');
         let video = $(`#${id}`).find('video').get(0);
         if (video) {
             video.play();
+            video.onwaiting = function () {
+                $videoContainer.addClass('waiting');
+            };
+            video.onplaying = function () {
+                $videoContainer.removeClass('waiting');
+                // hidePlaceholder(placeholder_2, this);
+            };
         }
 
         $(`#${id}`)
