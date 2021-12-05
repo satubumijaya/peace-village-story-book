@@ -97,6 +97,7 @@ new fullpage('#fullpage', {
     lazyLoading: true,
     // normalScrollElements: '.video-scroll .content-section',
     onLeave: function (origin, destination, direction) {
+
         const id = destination.item.id;
         if (!$(`#${id}`).hasClass('video-scroll')) {
             fullpage_api.setAutoScrolling(true);
@@ -116,18 +117,7 @@ new fullpage('#fullpage', {
             // $('.section').removeClass('origin');
             // $(`#${originId}`).addClass('origin');
         }
-        // $('')
-        // $(`#${id}`).prev('.section').addClass('origin');
 
-        // $(id).addClass('active');
-        // $(id)
-        //     .find('.lozad')
-        //     .each(function (el, i) {
-        //         console.log(el);
-        //         observer.triggerLoad($(this).get(0));
-        //     });
-        // const id = $(id).attr('id');
-        // window.location.hash = id;
         let $videoContainer = $(`#${id}`).find('video').closest('div');
         let video = $(`#${id}`).find('video').get(0);
         if (video) {
@@ -140,6 +130,19 @@ new fullpage('#fullpage', {
                 // hidePlaceholder(placeholder_2, this);
             };
         }
+        // $('')
+        // $(`#${id}`).prev('.section').addClass('origin');
+
+        // $(id).addClass('active');
+        // $(id)
+        //     .find('.lozad')
+        //     .each(function (el, i) {
+        //         console.log(el);
+        //         observer.triggerLoad($(this).get(0));
+        //     });
+        // const id = $(id).attr('id');
+        // window.location.hash = id;
+    
 
         $(`#${id}`)
             .find('div[data-background-image]')
@@ -159,6 +162,7 @@ new fullpage('#fullpage', {
     },
     afterLoad: function (origin, destination, direction) {
         const id = destination.item.id;
+        console.log('after load ', id);
         if ($(`#${id}`).hasClass('video-scroll')) {
             console.log('set false');
             fullpage_api.setAutoScrolling(false);
@@ -169,7 +173,22 @@ new fullpage('#fullpage', {
                 // console.log(el);
                 $(el).css('background-image', `url(${$(el).attr('data-background-image')})`);
             });
-
+        
+        setTimeout(() => {
+            let $videoContainer = $(`#${id}`).find('video').closest('div');
+            let video = $(`#${id}`).find('video').get(0);
+            if (video) {
+                video.play();
+                video.onwaiting = function () {
+                    $videoContainer.addClass('waiting');
+                };
+                video.onplaying = function () {
+                    $videoContainer.removeClass('waiting');
+                    // hidePlaceholder(placeholder_2, this);
+                };
+            }
+        }, 500);
+            
         $('.section').removeClass('fp-completely');
         $(`#${id}`).addClass('fp-completely');
     },
