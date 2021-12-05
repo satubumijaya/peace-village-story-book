@@ -167,6 +167,7 @@ new fullpage('#fullpage', {
             console.log('set false');
             fullpage_api.setAutoScrolling(false);
         }
+        
         $(`#${id}`)
             .find('div[data-background-image]')
             .each(function (i, el) {
@@ -189,6 +190,13 @@ new fullpage('#fullpage', {
             }
         }, 500);
             
+        /* add active class to nav */
+        const idArr = id.split('-');
+        $('#chapter .submenu a').removeClass('active');
+        if (idArr[0] === 'st') {
+            $(`#nav-st-${idArr[1]}`).addClass('active');
+        }
+
         $('.section').removeClass('fp-completely');
         $(`#${id}`).addClass('fp-completely');
     },
