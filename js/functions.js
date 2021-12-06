@@ -62,6 +62,10 @@ $(function () {
             fullpage_api.setAllowScrolling(true);
         },700);
     });
+
+    $(document).on('click', '#fullpage', function (e) {
+        $('.navbar-right .navbar-toggle').trigger('click');
+    });
 });
 
 function playAudio(){

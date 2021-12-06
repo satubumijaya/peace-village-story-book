@@ -553,7 +553,7 @@ d-flex {
   padding-top: auto;
   opacity: 1;
 }
-.navbar-right .nav-item.open .fullscreen-toggle p {
+.navbar-right .nav-item.open .fullscreen-toggle p, .navbar-right .nav-item.open .film p {
   height: 0;
   padding-top: 0;
   opacity: 0;
