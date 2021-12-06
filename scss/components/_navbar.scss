@@ -47,7 +47,7 @@
                 opacity: 0;
                 transition: all 0.4s ease;
                 // transition-delay: 0.2s;
-                overflow: hidden;
+                // overflow: hidden;
                 p {
                     font-size: 13px;
                     padding: 8px 0;
@@ -131,6 +131,58 @@
         ul.submenu {
             padding-top: 0;
             border-top: 1px solid #355870;
+            li{
+                position: relative;
+                .hover{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    right: calc(100% + 20px);
+                    bottom: 0;
+                    background-color: rgba(105, 160, 207, 0.6);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.2s all ease-in-out;
+                    max-width: 100px;
+                    min-width: 80px;
+                    .avatar{
+                        text-align: center;
+                        margin-bottom: 5px;
+                        img{
+                            width: 50px;
+                        }
+                    }
+                    .name{
+                        font-family: 'Montserrat';
+                        font-size: 16px;
+                        font-weight: 600;
+                        text-align: center;
+                        color: #FFF;
+                    }
+                    &:after{
+                        content: '';
+                        width: 0px;
+                        height: 0px;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid rgba(105, 160, 207, 0.6);
+                        position: absolute;
+                        left: 100%;
+                        bottom: 10px;
+                    }
+                }
+                &:hover{
+                    .hover{
+                        visibility: visible;
+                        opacity: 1;
+                        @include media-breakpoint-down(md){
+                            visibility: none;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
         }
         &.open {
             ul {
