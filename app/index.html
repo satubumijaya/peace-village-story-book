@@ -95,6 +95,9 @@
         <script src="dist/aos.js"></script>
         <script>
             AOS.init({disable: 'mobile'});
+            if(window.location.hash && window.location.hash !== '#intr-1'){
+                document.getElementById('welcome-continue-btn').innerHTML = 'Continue reading';
+            }
         </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
