@@ -1085,6 +1085,10 @@ ul.toc-list > li {
   }
 }
 
+#closing-video .content-section {
+  display: none;
+}
+
 html {
   /* scroll-snap-type: mandatory; */
   /* scroll-snap-points-y: repeat(300px); */

@@ -64,7 +64,9 @@ $(function () {
     });
 
     $(document).on('click', '#fullpage', function (e) {
-        $('.navbar-right .navbar-toggle').trigger('click');
+        if($('.navbar-right').hasClass('expanded')){
+            $('.navbar-right .navbar-toggle').trigger('click');
+        }
     });
 });
 
