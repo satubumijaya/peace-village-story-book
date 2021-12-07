@@ -30,9 +30,9 @@ $(window).on('load', function () {
         })
         .addTo(ctrl);
 
-    $('.section').each(function (index, element) {
-        $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
-    });
+    // $('.section').each(function (index, element) {
+        // $(this).append(`<div class="debug-id">${$(this).attr('id')}</div>`);
+    // });
 
     // var height = window.innerHeight;
     // var a = setInterval(function () {
