@@ -20,80 +20,87 @@
         <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <link rel="stylesheet" href="css/normalize.css" />
         <!-- <link rel="stylesheet" href="css/skeleton.css" /> -->
-    
+
         <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/animate.css" />
         <link rel="stylesheet" href="dist/aos.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
-            .section{
+            .section {
                 visibility: hidden;
             }
-            .section.active{
+            .section.origin,
+            .section.fp-completely {
                 visibility: visible;
-                z-index: 2;
+            }
+            .section.active {
+                visibility: visible;
+                /* z-index: 2; */
             }
         </style>
         <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <link rel="icon" type="image/png" href="images/favicon.png" />
     </head>
 
-    <body>
+    <body class="welcome-open">
+        <audio autoplay loop src="video/time-stand-still.mp3" id="backsound"></audio>
         @@include('./partials/navbar.html')
+        @@include('./partials/welcome.html')
 
         <div class="container" id="fullpage">
-            @@include('./partials/intro.html')
-            @@include('./partials/vo-gulukguluk.html')
-            @@include('./partials/story-1.html')
-            @@include('./partials/story-2.html')
-            @@include('./partials/story-3.html')
-            @@include('./partials/vo-prancak.html')
-            @@include('./partials/story-4.html')
-            @@include('./partials/story-5.html')
-            @@include('./partials/vo-sidomulyo.html')
-            @@include('./partials/story-6.html')
-            @@include('./partials/story-7.html')
-            @@include('./partials/vo-candirenggo.html')
-            @@include('./partials/story-8.html')
-            @@include('./partials/story-9.html')
-            @@include('./partials/story-10.html')
+            @@include('./partials/intro.html') 
+            @@include('./partials/vo-gulukguluk.html') 
+            @@include('./partials/story-1.html') 
+            @@include('./partials/story-2.html') 
+            @@include('./partials/story-3.html') 
+            @@include('./partials/vo-prancak.html') 
+            @@include('./partials/story-4.html') 
+            @@include('./partials/story-5.html') 
+            @@include('./partials/vo-sidomulyo.html') 
+            @@include('./partials/story-6.html') 
+            @@include('./partials/story-7.html') 
+            @@include('./partials/vo-candirenggo.html') 
+            @@include('./partials/story-8.html') 
+            @@include('./partials/story-9.html') 
+            @@include('./partials/story-10.html') 
             @@include('./partials/closing.html')
         </div>
 
         <div class="resize-overlay"></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/unveilhooks/ls.unveilhooks.min.js" integrity="sha512-hQ7LIAYhD17CZh6bDzdQI7NThUHmZGcAbGDfCWHO/sOEPRAdlkQFg4gTsKhWWbI1PMUvjD7JjA+5x3pH23Bnyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        <!-- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/plugins/video-embed/ls.video-embed.min.js" integrity="sha512-acMQRDf0YzTUdu1+UFHIIxJrG6OalrhkZ3Lt6hWnCKgSQM6CkMcOYSiviEZZZbkHnL9//UhmSgwzI5seAsaKNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
-        <script type="text/javascript">
-            $(document).ready(() => {
-                // to load images in a lazy way
-                // lazy loads elements with default selector as '.lozad'
-                // const observer = lozad();
-                // observer.observe();
-            });
-        </script>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js" integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js" integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js" integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js" integrity="sha512-wstvQlySDtT//3yKfbxpy8AS5b4UQ0tnItav8dGCVLGO3u/Ymb6mUEgVzDL8a/DXdtiuhsTj2ElDsXQ+E2cDYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js" integrity="sha512-bxzECOBohzcTcWocMAlNDE2kYs0QgwGs4eD8TlAN2vfovq13kfDfp95sJSZrNpt0VMkpP93ZxLC/+WN/7Trw2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js" integrity="sha512-FzESM/E7XJBqcJyrXa08gRcpp5rDHO661C0L3vH4NsZfUWUsjN4+t6Lg8h+e8TMR2aYijIrcT+CPGq7tSugRzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    
-        <script type="text/javascript" src="js/bideo.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+        <!-- <script type="text/javascript" src="js/bideo.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"> </script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script> -->
         <script type="text/javascript" src="js/page-scroll.js"></script>
         <script src="dist/aos.js"></script>
         <script>
-            AOS.init({
-            });
+            AOS.init({disable: 'mobile'});
+            if(window.location.hash && window.location.hash !== '#intr-1'){
+                document.getElementById('welcome-continue-btn').innerHTML = 'Continue reading';
+            }
         </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        
+
         <!-- <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script> -->
         <script type="text/javascript" src="js/functions.js"></script>
 

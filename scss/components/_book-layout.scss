@@ -1,28 +1,32 @@
-.section.book-layout{
+.section.book-layout {
     // background-image: url(../images/bg-toc.png);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 
-    .content-section{
+    .content-section {
         padding: 0;
         position: fixed;
         opacity: 0;
-        transition: 1s opacity ease-in-out;
-        .text-container{
+        // visibility: hidden;
+        transition: 1s all ease-in-out;
+
+        .text-container {
             width: 30%;
             max-width: 40%;
             padding: 5%;
             // height:100%;
         }
-        .image-container{
+        .image-container {
             height: 100%;
             width: 60%;
-            .book-image{
+            background-position: center;
+            background-size: cover;
+            .book-image {
                 position: fixed;
                 top: 0;
                 right: 0;
-                bottom:0;
+                bottom: 0;
                 // width: 100%;
                 width: 60%;
                 height: 100%;
@@ -32,35 +36,56 @@
             }
         }
     }
-    .section-bg.book-image{
+    .section-bg.book-image {
         width: 60%;
         height: 100%;
         top: 0;
         right: 0;
         left: auto;
-        bottom:0;
+        bottom: 0;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    &.reversed{
-        .content-section{
-            flex-direction: row-reverse;;
+    &.reversed {
+        .content-section {
+            flex-direction: row-reverse;
         }
-        .section-bg.book-image{
+        .section-bg.book-image {
             left: 0;
             right: auto;
         }
     }
 
-    // &.active{
-    //     .content-section{
-    //         opacity: 1;
-    //     }
-    // }
-}
-.section.active + .section.section.book-layout.active{
-    .content-section{
+    &.active{
+        .content-section {
             opacity: 1;
+            // visibility: visible;
         }
+    }
+
+    @include media-breakpoint-down(md) {
+        .content-section {
+            flex-direction: column-reverse;
+            .text-container {
+                max-width: 100%;
+                width: auto;
+                padding: 40px 20px;
+            }
+            .image-container {
+                width: 100%;
+            }
+        }
+
+        &.reversed {
+            .content-section {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+.section.active + .section.section.book-layout.active {
+    .content-section {
+        opacity: 1;
+    }
 }

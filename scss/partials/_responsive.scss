@@ -1,0 +1,72 @@
+@include media-breakpoint-down(md) {
+    .section {
+        .mobile-0 {
+            background-position: 0% center !important;
+        }
+        .mobile-10 {
+            background-position: 10% center !important;
+        }
+        .mobile-15 {
+            background-position: 15% center !important;
+        }
+        .mobile-20 {
+            background-position: 20% center !important;
+        }
+        .mobile-25 {
+            background-position: 25% center !important;
+        }
+        .mobile-30 {
+            background-position: 30% center !important;
+        }
+        .mobile-35 {
+            background-position: 35% center !important;
+        }
+        .mobile-40 {
+            background-position: 40% center !important;
+        }
+        .mobile-45 {
+            background-position: 45% center !important;
+        }
+        .mobile-55{
+            background-position: 55% center !important;
+        }
+        .mobile-60 {
+            background-position: 60% center !important;
+        }
+        .mobile-65 {
+            background-position: 65% center !important;
+        }
+        .mobile-70 {
+            background-position: 70% center !important;
+        }
+        .mobile-75 {
+            background-position: 75% center !important;
+        }
+        .mobile-80 {
+            background-position: 80% center !important;
+        }
+        .mobile-85 {
+            background-position: 85% center !important;
+        }
+        .mobile-90 {
+            background-position: 90% center !important;
+        }
+        .mobile-100 {
+            background-position: 100% center !important;
+        }
+    }
+}
+
+.mobile-only{
+    display: none!important;
+    @include media-breakpoint-down(md){
+        display: block!important;
+    }
+}
+
+.desktop-only{
+    display: block!important;
+    @include media-breakpoint-down(md){
+        display: none!important;
+    }
+}
