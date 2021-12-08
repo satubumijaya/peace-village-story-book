@@ -131,6 +131,7 @@
         ul.submenu {
             padding-top: 0;
             border-top: 1px solid #355870;
+            visibility: hidden;
             li{
                 position: relative;
                 .hover{
@@ -185,6 +186,9 @@
             }
         }
         &.open {
+            .submenu{
+                visibility: visible;
+            }
             ul {
                 #chapter {
                     // display: block;

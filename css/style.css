@@ -486,6 +486,7 @@ d-flex {
 .navbar-right .nav-item ul.submenu {
   padding-top: 0;
   border-top: 1px solid #355870;
+  visibility: hidden;
 }
 .navbar-right .nav-item ul.submenu li {
   position: relative;
@@ -538,6 +539,9 @@ d-flex {
     visibility: none;
     opacity: 0;
   }
+}
+.navbar-right .nav-item.open .submenu {
+  visibility: visible;
 }
 .navbar-right .nav-item.open ul #chapter {
   max-height: 100%;
