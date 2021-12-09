@@ -530,6 +530,11 @@ d-flex {
   left: 100%;
   bottom: 10px;
 }
+@media (max-width: 767.98px) {
+  .navbar-right .nav-item ul.submenu li .hover {
+    display: none !important;
+  }
+}
 .navbar-right .nav-item ul.submenu li:hover .hover {
   visibility: visible;
   opacity: 1;

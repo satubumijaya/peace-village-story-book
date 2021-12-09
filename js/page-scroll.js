@@ -97,7 +97,6 @@ new fullpage('#fullpage', {
     lazyLoading: true,
     // normalScrollElements: '.video-scroll .content-section',
     onLeave: function (origin, destination, direction) {
-
         const id = destination.item.id;
         if (!$(`#${id}`).hasClass('video-scroll')) {
             fullpage_api.setAutoScrolling(true);
@@ -130,19 +129,16 @@ new fullpage('#fullpage', {
                 // hidePlaceholder(placeholder_2, this);
             };
         }
-        // $('')
-        // $(`#${id}`).prev('.section').addClass('origin');
+        
+        if(destination.item.id === 'closing-video') {
 
-        // $(id).addClass('active');
-        // $(id)
-        //     .find('.lozad')
-        //     .each(function (el, i) {
-        //         console.log(el);
-        //         observer.triggerLoad($(this).get(0));
-        //     });
-        // const id = $(id).attr('id');
-        // window.location.hash = id;
-    
+        }
+        
+        if (origin.item.id === 'closing-video') {
+            var src = $(`#${origin.item.id}`).find('iframe').attr('src');
+            $(`#${origin.item.id}`).find('iframe').attr('src', '');
+            $(`#${origin.item.id}`).find('iframe').attr('data-src', src);
+        }
 
         $(`#${id}`)
             .find('div[data-background-image]')
@@ -150,6 +146,7 @@ new fullpage('#fullpage', {
                 // console.log(el);
                 $(el).css('background-image', `url(${$(el).attr('data-background-image')})`);
             });
+
         $(`#${id}`)
             .next('.section')
             .find('div[data-background-image]')
