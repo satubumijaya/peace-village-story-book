@@ -1016,6 +1016,7 @@ ul.toc-list > li {
   #close-2 .top-logos {
     flex-wrap: wrap;
     margin-bottom: 20px;
+    flex-direction: column-reverse;
   }
   #close-2 .top-logos div {
     width: 100%;
