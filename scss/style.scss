@@ -100,7 +100,7 @@ section {
             top: 0;
             left: 0;
         }
-        &:before{
+        &:before {
             // content: '';
             // background-image: url('../images/loading.gif');
             // background-size: 100px 100px;
@@ -165,8 +165,7 @@ section {
 
     &.active,
     &.origin,
-    &.fp-completely 
-    {
+    &.fp-completely {
         .content-section {
             opacity: 1;
             visibility: visible;
@@ -208,8 +207,8 @@ section {
         color: gray;
     }
 
-    .waiting{
-        &:after{
+    .waiting {
+        &:after {
             content: '';
             background-image: url('../images/loading.gif');
             background-size: 80px 80px;
@@ -342,7 +341,7 @@ section {
         padding-bottom: 7rem;
         justify-content: space-between;
         height: 100%;
-        h5{
+        h5 {
             font-size: 36px;
             margin-bottom: 10px;
             margin-top: 30px;
@@ -706,7 +705,7 @@ img.greyscale {
             width: 100%;
             position: absolute;
             top: 0;
-            left:0;
+            left: 0;
             // top: 50%;
             // left: 50%;
             // width: 100vw;
@@ -721,7 +720,7 @@ img.greyscale {
 }
 
 .video-scroll {
-    .fp-tableCell{
+    .fp-tableCell {
         overflow: scroll;
         display: block;
         overscroll-behavior: contain;
@@ -970,12 +969,12 @@ img.greyscale {
 
 section#close-1 {
     position: relative;
-    .section-bg{
+    .section-bg {
         background-position: top center;
         background-repeat: no-repeat;
     }
-    @include media-breakpoint-down(md){
-        .section-bg{
+    @include media-breakpoint-down(md) {
+        .section-bg {
             background-position: top center;
         }
     }
@@ -1102,32 +1101,31 @@ section#closing-video .bg-video {
     }
 }
 
-
-#st-10-6 .section-bg{
-    .image-grid{
+#st-10-6 .section-bg {
+    .image-grid {
         // position: absolute;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         height: 100%;
         width: 100%;
-        div{
+        div {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            &:nth-child(1){
+            &:nth-child(1) {
                 margin-right: 5px;
                 margin-bottom: 10px;
                 height: calc(50% - 10px);
                 width: calc(50vw - 5px);
             }
-            &:nth-child(2){
+            &:nth-child(2) {
                 margin-left: 5px;
                 margin-bottom: 10px;
                 height: calc(50% - 10px);
                 width: calc(50vw - 5px);
             }
-            &:nth-child(3){
+            &:nth-child(3) {
                 // margin-right: 10px;
                 height: 50%;
                 width: calc(100vw);
@@ -1135,22 +1133,22 @@ section#closing-video .bg-video {
         }
     }
 
-    @include media-breakpoint-down(md){
-        .image-grid{
-            div{
-                &:nth-child(1){
+    @include media-breakpoint-down(md) {
+        .image-grid {
+            div {
+                &:nth-child(1) {
                     width: 100vw;
                     margin: 0;
                     margin-bottom: 10px;
                     height: calc(33.33% - 10px);
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     width: 100vw;
                     margin: 0;
                     margin-bottom: 10px;
                     height: calc(33.33% - 10px);
                 }
-                &:nth-child(3){
+                &:nth-child(3) {
                     width: 100vw;
                     margin: 0;
                     // margin-bottom: 10px;
@@ -1161,36 +1159,36 @@ section#closing-video .bg-video {
     }
 }
 
-#welcome{
+#welcome {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #3D566E;
+    background-color: #3d566e;
     background-image: url('images/overlay.png');
     z-index: 9999;
     transition: 0.7s opacity ease-in-out;
-    .content-section{
+    .content-section {
         display: flex;
         align-items: center;
-        .content-wrapper{
+        .content-wrapper {
             max-width: 600px;
             text-align: center;
             margin: auto;
             font-weight: 300;
             font-size: 20px;
             div {
-                margin-bottom: 20px
+                margin-bottom: 20px;
             }
         }
     }
 
-    #welcome-continue-btn{
+    #welcome-continue-btn {
         margin-top: 20px;
-        border: 2px solid #82A4B7;
+        border: 2px solid #82a4b7;
         border-radius: 6px;
-        color: #82A4B7;
+        color: #82a4b7;
         background-color: transparent;
         transition: 0.2s ease-in-out;
         padding: 10px 20px;
@@ -1198,18 +1196,60 @@ section#closing-video .bg-video {
         display: inline-block;
         text-decoration: none;
         font-weight: bold;
-        &:hover{
-            background-color: #82A4B7;
-            color: #3D566E;
+        &:hover {
+            background-color: #82a4b7;
+            color: #3d566e;
         }
     }
-    img{
+    img {
         margin-top: 20px;
         max-height: 40px;
     }
 }
 
-body.welcome-open{
+body.welcome-open {
     position: static;
     overflow: hidden;
+}
+
+#play-backsound {
+    position: fixed;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 4;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.8;
+    svg {
+        width: 30px;
+        height: 30px;
+        fill: #FFF;
+    }
+    .play-icon {
+        display: none;
+    }
+    .pause-icon {
+        display: block;
+    }
+    &.play {
+        .play-icon {
+            display: block;
+        }
+        .pause-icon {
+            display: none;
+        }
+    }
+    &.hide{
+        display: none;
+    }
+    @include media-breakpoint-down(md){
+        top: 10px;
+        bottom: auto;
+    }
 }

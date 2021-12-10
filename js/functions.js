@@ -72,11 +72,21 @@ $(function () {
 
 function playAudio(){
     $('#backsound').get(0).play();
+    $('#play-backsound').addClass('play');
 }
 
 function pauseAudio() {
     $('#backsound').get(0).pause();
+    $('#play-backsound').removeClass('play');
 }
+$('#play-backsound').click(function(){
+    if($(this).hasClass('play')){
+        pauseAudio();
+    } else {
+        playAudio();
+    }
+});
+
 
 // const observerOptions = {
 //   root: null,

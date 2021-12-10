@@ -2093,7 +2093,7 @@ section#closing-video .bg-video {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #3D566E;
+  background-color: #3d566e;
   background-image: url("images/overlay.png");
   z-index: 9999;
   transition: 0.7s opacity ease-in-out;
@@ -2114,9 +2114,9 @@ section#closing-video .bg-video {
 }
 #welcome #welcome-continue-btn {
   margin-top: 20px;
-  border: 2px solid #82A4B7;
+  border: 2px solid #82a4b7;
   border-radius: 6px;
-  color: #82A4B7;
+  color: #82a4b7;
   background-color: transparent;
   transition: 0.2s ease-in-out;
   padding: 10px 20px;
@@ -2126,8 +2126,8 @@ section#closing-video .bg-video {
   font-weight: bold;
 }
 #welcome #welcome-continue-btn:hover {
-  background-color: #82A4B7;
-  color: #3D566E;
+  background-color: #82a4b7;
+  color: #3d566e;
 }
 #welcome img {
   margin-top: 20px;
@@ -2137,4 +2137,46 @@ section#closing-video .bg-video {
 body.welcome-open {
   position: static;
   overflow: hidden;
+}
+
+#play-backsound {
+  position: fixed;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 4;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+#play-backsound svg {
+  width: 30px;
+  height: 30px;
+  fill: #FFF;
+}
+#play-backsound .play-icon {
+  display: none;
+}
+#play-backsound .pause-icon {
+  display: block;
+}
+#play-backsound.play .play-icon {
+  display: block;
+}
+#play-backsound.play .pause-icon {
+  display: none;
+}
+#play-backsound.hide {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  #play-backsound {
+    top: 10px;
+    bottom: auto;
+  }
 }

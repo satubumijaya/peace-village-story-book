@@ -195,6 +195,9 @@ new fullpage('#fullpage', {
         }
         if (idArr[0] !== 'intr') {
             pauseAudio();
+            $('#play-backsound').addClass('hide');
+        } else {
+            $('#play-backsound').removeClass('hide');
         }
 
 
