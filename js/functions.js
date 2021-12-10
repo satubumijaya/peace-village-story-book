@@ -53,40 +53,57 @@ $(function () {
         const currentId = fullpage_api.getActiveSection().item.id;
         const idArr = currentId.split('-');
 
-        if(idArr[0] === 'intr'){
-            playAudio();
+        if (idArr[0] === 'intr') {
+            toggleAudio();
         }
 
-        setTimeout(function(){
+        setTimeout(function () {
             $('#welcome').css('visibility', 'hidden');
             fullpage_api.setAllowScrolling(true);
-        },700);
+        }, 700);
     });
 
     $(document).on('click', '#fullpage', function (e) {
-        if($('.navbar-right').hasClass('expanded')){
+        if ($('.navbar-right').hasClass('expanded')) {
             $('.navbar-right .navbar-toggle').trigger('click');
         }
     });
 });
 
-function playAudio(){
-    $('#backsound').get(0).play();
-    $('#play-backsound').addClass('play');
+function toggleAudio(action) {
+    if (action === 'pause') {
+        $('#backsound').get(0).pause();
+        $('#play-backsound').addClass('play');
+        console.log('pause');
+    } else {
+        if ($('#backsound').get(0).paused) {
+            $('#backsound').get(0).currentTime = 0;
+            $('#backsound').get(0).play();
+            $('#play-backsound').removeClass('play');
+        } else {
+            // $('#play-backsound').removeClass('play');
+            $('#backsound').get(0).pause();
+            $('#play-backsound').addClass('play');
+        }
+    }
 }
 
 function pauseAudio() {
     $('#backsound').get(0).pause();
-    $('#play-backsound').removeClass('play');
-}
-$('#play-backsound').click(function(){
-    if($(this).hasClass('play')){
-        pauseAudio();
+    if ($('#backsound').get(0).paused) {
+        $('#play-backsound').addClass('play');
     } else {
-        playAudio();
+        $('#play-backsound').removeClass('play');
     }
+}
+$('#play-backsound').click(function () {
+    toggleAudio();
+    // if($(this).hasClass('play')){
+    //     pauseAudio();
+    // } else {
+    //     playAudio();
+    // }
 });
-
 
 // const observerOptions = {
 //   root: null,

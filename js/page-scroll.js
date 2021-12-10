@@ -194,7 +194,7 @@ new fullpage('#fullpage', {
             $(`#nav-st-${idArr[1]}`).addClass('active');
         }
         if (idArr[0] !== 'intr') {
-            pauseAudio();
+            toggleAudio('pause');
             $('#play-backsound').addClass('hide');
         } else {
             $('#play-backsound').removeClass('hide');
