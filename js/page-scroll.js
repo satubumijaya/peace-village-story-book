@@ -11,7 +11,7 @@ $(window).on('load', function () {
         triggerHook: 'onLeave',
     })
         .on('leave', function () {
-            console.log('leeeeaving');
+            // console.log('leeeeaving');
             TweenLite.to('#intr-1 .intro-gate-left', 0.5, {
                 xPercent: -100,
             });
@@ -20,7 +20,7 @@ $(window).on('load', function () {
             });
         })
         .on('enter', function () {
-            console.log('entering');
+            // console.log('entering');
             TweenLite.to('#intr-1 .intro-gate-left', 0.5, {
                 xPercent: 0,
             });
@@ -161,7 +161,7 @@ new fullpage('#fullpage', {
         const id = destination.item.id;
         console.log('after load ', id);
         if ($(`#${id}`).hasClass('video-scroll')) {
-            console.log('set false');
+            // console.log('set false');
             fullpage_api.setAutoScrolling(false);
         }
 

@@ -74,7 +74,7 @@ function toggleAudio(action) {
     if (action === 'pause') {
         $('#backsound').get(0).pause();
         $('#play-backsound').addClass('play');
-        console.log('pause');
+        // console.log('pause');
     } else {
         if ($('#backsound').get(0).paused) {
             $('#backsound').get(0).currentTime = 0;
