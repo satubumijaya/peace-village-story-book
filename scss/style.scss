@@ -1248,7 +1248,7 @@ body.welcome-open {
         display: none;
     }
     @include media-breakpoint-down(md){
-        top: 10px;
-        bottom: auto;
+        bottom: 10px;
+        // bottom: auto;
     }
 }

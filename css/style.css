@@ -2175,7 +2175,6 @@ body.welcome-open {
 }
 @media (max-width: 767.98px) {
   #play-backsound {
-    top: 10px;
-    bottom: auto;
+    bottom: 10px;
   }
 }
